@@ -1,30 +1,58 @@
+<style type="text/css">
+body{background:#fff;}
+.home{padding-bottom:100px;}
+.process{max-width:1800px;width:100%;margin:0 auto;}
+.home .homeTitle{text-align:center; font-size:3vw; line-height:4.5vw;}
+</style>
 <template>
-	<div>
+	<div class="home">
+		<MyHeader></MyHeader>
 		<HomeHead></HomeHead>
+		<HomeMenu></HomeMenu>
+		<HomeDesignType></HomeDesignType>
+		<HomeDesign></HomeDesign>
 		<HomeCompany></HomeCompany>
-		<div class="process"><img width="100%" src="/static/image/process.jpg" /></div>
+		<MyFooter></MyFooter>
+		<!-- <ContactWhole></ContactWhole>
+		<Eject :ejectType="ejectType"></Eject> -->
 	</div>
 </template>
 <script type="text/javascript">
+import MyHeader from '@/components/MyHeader'
 import HomeHead from '@/components/home/HomeHead'
+import HomeMenu from '@/components/home/HomeMenu'
+import HomeDesignType from '@/components/home/HomeDesignType'
 import HomeCompany from '@/components/home/HomeCompany'
+import HomeDesign from '@/components/home/HomeDesign'
+import MyFooter from '@/components/MyFooter'
+import ContactWhole from '@/components/ContactWhole'
+import Eject from '@/components/public/eject/Eject'
 export default {
 	name:'home',
 	components:{
+		MyHeader,
 		HomeHead,
-		HomeCompany
+		HomeMenu,
+		HomeDesignType,
+		HomeCompany,
+		HomeDesign,
+		MyFooter,
+		ContactWhole,
+		Eject
 	},
 	data(){
 		return {
-
+			ejectType:{
+				type:'complaint',
+				isShow:true
+			}
 		}
 	},
-	mounted:()=>{
-		document.title = 'home'
+	methods:{
+	},
+	mounted(){
+		document.title = 'home';
+		
 	}
 }
 </script>
-<style type="text/css">
-body{background:#fff url('/static/image/bg.png') repeat;}
-.process{max-width:1800px;width:100%;margin:0 auto;}
-</style>

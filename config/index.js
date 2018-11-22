@@ -11,12 +11,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/api/': 'http://localhost:8080/'
+        '/api/': {
+            target: 'http://192.168.2.112:8031/openapi/v3/',
+            changeOrigin: true,
+            pathRewrite: {
+             '^/api/': ''
+            }
+        }
     },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 7070, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,
     notifyOnErrors: true,
@@ -45,7 +51,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/swallow/',//打包后静态资源路径前缀
+    assetsPublicPath: '/',//打包后静态资源路径前缀
 
     /**
      * Source Maps

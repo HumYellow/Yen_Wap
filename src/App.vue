@@ -1,24 +1,27 @@
+<style>
+html{height:100%;}
+body{background:#fff;min-height:100%;}
+#app{min-height:100vh;}
+</style>
 <template>
   <div id="app">
-    <MyHeader></MyHeader>
-    <router-view/>
-    <MyFooter></MyFooter>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
+    <!-- <MyFooter></MyFooter> -->
   </div>
 </template>
 <script>
 import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
 import {mapGetters,mapActions} from 'vuex' 
 import 'swiper/dist/css/swiper.css'
-Vue.use(VueAwesomeSwiper)
 
-import MyHeader from '@/components/MyHeader'
 import MyFooter from '@/components/MyFooter'
 import './assets/css/main.css'
 export default {
   name: 'App',
   components:{
-    MyHeader,
     MyFooter,
   },
   data () {
@@ -34,5 +37,3 @@ export default {
 }
 </script> 
 
-<style>
-</style>

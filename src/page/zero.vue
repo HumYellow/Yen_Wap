@@ -1,3 +1,7 @@
+
+<style type="text/css">
+	
+</style>
 <template>
 	
 </template>
@@ -17,6 +21,3 @@ export default {
 	}
 }
 </script>
-<style type="text/css">
-	
-</style>

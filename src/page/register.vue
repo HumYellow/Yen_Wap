@@ -86,7 +86,6 @@ export default {
 		document.title = 'register'
 	},
 	created(){
-		
 	},
 	methods:{
 		register:function(){

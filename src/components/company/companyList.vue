@@ -22,7 +22,7 @@
 
 .companyFilter .filter{text-align:center; color:#000;background:#fff;line-height:60px;z-index:10000;position:relative;}
 .companyFilter .filter li{float:left;width:33.33%;box-sizing: border-box;margin:10px 0;}
-.companyFilter .filter li a{display:block; margin:0 5px;text-align:center;color:#333;border-radius:10px;background:#f4f4f4;height:40px;line-height:40px;}
+.companyFilter .filter li a{display:block; margin:0 5px;text-align:center;color:#333;border-radius:10px;background:#f4f4f4;height:40px;line-height:40px;font-size:12px;}
 .companyFilter .filter li a.select{color:#fff;background:#3fbb87;}
 .companyFilter .filter .filter-enter-active,.companyFilter .filter .filter-leave-active {
   transition: opacity .4s;

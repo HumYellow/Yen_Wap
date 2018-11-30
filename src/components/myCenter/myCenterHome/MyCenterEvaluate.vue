@@ -12,7 +12,7 @@
 </style>
 <template>
 	<div id="myCenterEvaluate">
-		<PageHeader thisTitle="Evaluate"></PageHeader>
+		<PageHeader thisTitle="Đánh giá"></PageHeader>
 		<div class="evaluate">
 			<div class="starList clear">
 				<div class="starBox" v-for="(star ,index) in star" @click="starClick(index)">
@@ -88,7 +88,7 @@ export default {
         },
   		subDate:function(){
   			if(!this.evaluateDate.star){
-  				this.$layer.msg('Please comment on the score',{
+  				this.$layer.msg('Vui lòng đánh giá',{
 					title:'message',
 					btn:'OK'
 				})

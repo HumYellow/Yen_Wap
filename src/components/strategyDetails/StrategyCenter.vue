@@ -20,7 +20,7 @@
 				{{desc.summary}}
 				
 			</div> -->
-			<p>{{desc.content}}</p>
+			<p v-html="desc.content"></p>
 		</div>
     </div>
 </template>

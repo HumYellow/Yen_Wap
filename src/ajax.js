@@ -58,7 +58,7 @@ axios.interceptors.response.use(
  */
 
 export function fetch(url,params={}){
-  return new Promise((resolve,reject) => {
+  return new Promise((resolve,reject) => {console.info(url)
     axios.get(url,{
       params:params
     },axiosJsonConfig)

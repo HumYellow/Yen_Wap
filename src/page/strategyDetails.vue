@@ -2,7 +2,7 @@
 </style>
 <template>
 	<div>
-		<PageHeader :thisTitle="thisTitle"></PageHeader>
+		<PageHeader v-if="!isApp" :thisTitle="thisTitle"></PageHeader>
 		<div class="strategyDetails clear">
 			<div class="strategyDetailsPage clear">
 				<StrategyCenter></StrategyCenter>
@@ -20,6 +20,7 @@ export default {
 	data() {
 	  return {
 	  	thisTitle:'Chi tiết Raiders',
+	  	isApp:this.$route.query.app,
 	  	desc:{
 	  	}
 	  }
@@ -30,7 +31,7 @@ export default {
 		StrategySidebar
 	},
 	mounted() {
-		document.title = 'strategyDetails'
+		document.title = 'Chi tiết Raiders'
 	  
 	}
 }

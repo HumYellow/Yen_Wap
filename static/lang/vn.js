@@ -8,7 +8,8 @@ module.exports={
 		Strategy:'Phương án',
 		Guarantee:'Bảo đảm',
 		Calculate:'Dự toán',
-		Mine:'Mỏ'
+		Mine:'Mỏ',
+		HoChiMing:'Hồ Chí Minh'
 	},
 	login:{
 		login:'Đăng nhập',
@@ -25,6 +26,10 @@ module.exports={
 		newUse:'Người dùng mới',
 		passwordError:'Mật khẩu tối thiểu 8 kí tự bao gồm cả chữ và số.',
 		submit:'Đăng lên',
+	},
+	register:{
+		agreementText1:'Tôi đã đọc và đồng ý',
+		agreementText2:'《Thoả thuận sử dụng dịch vụ của YEN》',
 	},
 	tips:{
 		titleMsg:'Thông điệp',
@@ -58,7 +63,8 @@ module.exports={
 		pleaseEvaluation:'Hãy nhập vào đánh giá của ngài',
 		uploadPic:'Đang tải hình ảnh',
 		freeApplication:'Miễn phí Báo giá',
-		freeQuotation:'Miễn phí Báo giá'
+		freeQuotation:'Miễn phí Báo giá',
+		addPicMod:'/static/image/myCenter/addPicMod.png',
     },
     aboutUs:{
     	inputCompanyName:'Tên Công ty',
@@ -217,6 +223,7 @@ module.exports={
 			city:'Thành phố',
 			currentProfilePhoto:'Hình đại diện ',
 			uploadProfilePhoto:'Đăng hình đại diện',
+			showPhoneText:'Đồng ý công khai phương thức liên hệ với người dùng khác',
 			save:'Lưu lại',
 			edit:'Biên tập',
 			upload:'Tải lên',
@@ -231,10 +238,29 @@ module.exports={
 		termsOfService:'Điều khoản sử dụng',
 		aboutUs:'Về chúng tôi',
 		connectUs:'Thông tin Liên hệ',
+		feedback:'Thông tin phản hồi',
 		businessCooperation:'Công ty liên kết',
 		settings:'Thông tin Cá nhân',
-		disclaimer:'Miễn truy cứu trách nhiệm: Một bộ phận thông tin của trang web là do khách hàng tự đăng tải lên,<br /> nếu chủ sở hữu phát hiện tình trạng sai hay lỗi biến dạng hình ảnh, vui lòng liên hệ với chúng tôi.'
-	
+		disclaimer:'Miễn truy cứu trách nhiệm: Một bộ phận thông tin của trang web là do khách hàng tự đăng tải lên,<br /> nếu chủ sở hữu phát hiện tình trạng sai hay lỗi biến dạng hình ảnh, vui lòng liên hệ với chúng tôi.',
+		feedbackMod:{
+			writeDown:'Vui lòng nói rõ ý kiến đóng góp của bạn',
+			myFeedback:'Lịch sử phản hồi',
+			contactNumber:'Điện thoại liên hệ',
+			recovered:'Chưa phản hồi',
+			unanswered:'Đã phản hồi',
+			haventReceived:"Bạn vẫn chưa đóng góp ý kiến."
+		},
+		uploadAlbum:'Tải lên tập ảnh',
 	},
+	modifyPhone:{
+		modifyPhoneTitle:'Đổi số điện thoại đã đăng ký',
+		verify:'Xác thực',
+		boundPhone:'Vui lòng nhập số điện thoại bạn đã đăng ký.',
+		validationCode:'Vui lòng nhập mã xác minh',
+		getCode:'Nhận mã xác thực',
+		finish:'Hoàn thành',
+		newPhone:'Vui lòng nhập số điện thoại mới',
+		validationCode:'Nhập mã xác nhận bên phải',
+	}
   }
 }

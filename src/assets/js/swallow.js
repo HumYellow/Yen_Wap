@@ -41,7 +41,16 @@ swallow.move = function(){
 	document.body.style.overflow='';//出现滚动条
 	document.removeEventListener("touchmove",swallow.mo,false);
 }
-
+swallow.localStorageSet = function(k,v){
+	localStorage.setItem(k,v)
+}
+swallow.localStorageGet = function(k){
+	let v = localStorage.getItem(k)
+	return v
+}
+swallow.localStorageClear = function(){
+	localStorage.clear()
+}
 Array.prototype.indexOf = function(val) {
   for (var i = 0; i < this.length; i++) {
     if (this[i] == val) return i;

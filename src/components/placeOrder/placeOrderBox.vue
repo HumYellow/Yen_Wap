@@ -17,7 +17,7 @@
 		<img width="100%" src="/static/image/placeOrderBg.jpg" />
 		<div class="placeOrderBox">
 			<div class="placeOrderCity">
-				<img height="100%" src="/static/image/add.png"/>Hồ Chí Minh
+				<img height="100%" src="/static/image/add.png"/>{{$t('message.menu.HoChiMing')}}
 			</div>
 			<div class="placeOrderMod">
 				<input class="textBox" oninput="value=value.replace(/[^\d]/g,'')" :placeholder="$t('message.placeOrder.phone')" v-model="phone" />

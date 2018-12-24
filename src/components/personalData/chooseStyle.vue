@@ -57,8 +57,8 @@ export default {
 					this.$router.replace('/personalData')
 				}else{
 					this.$layer.alert(res.msg,{
-						title:'tips',
-						btn:'OK'
+						title:this.$t('message.tips.titleMsg'),
+						btn:this.$t('message.tips.ok')
 					})
 				}
 			});

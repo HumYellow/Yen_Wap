@@ -24,7 +24,7 @@ background-size:auto 50%;background-position:15px 10px;}
 				<img width="30%" src="/static/image/loginLogo.png" />
 			</router-link>
 			<div class="loginMod userNameMod">
-				<input :class="userName == '' && this.isNull?'null':''" v-model="userName" :placeholder="$t('message.login.phone')" oninput="value=value.replace(/[^\d]/g,'')" />
+				<input :class="userName == '' && this.isNull?'null':''" v-model="userName" :placeholder="$t('message.login.phone')" oninput="value=value.replace(/[^\d]/g,'')" maxlength="10" />
 			</div>
 			<div class="loginMod passwordMod">
 				<input type="password" :class="password == ''&&this.isNull?'null':''" v-model="password" :placeholder="$t('message.login.password')" />
@@ -56,7 +56,6 @@ export default {
 		}
 	},
 	mounted:()=>{
-		document.title = 'login'
 	},
 	methods:{
 		toLogin:function(){
@@ -69,7 +68,7 @@ export default {
 				if(data[a] == ''){
 					this.contSub = false
 					let nullName;
-					if(a == 'userName' && a == 'phone'){
+					if(a == 'userName' || a == 'phone'){
 						nullName = this.$t('message.login.phone')
 					}else if(a == 'password'){
 						nullName = this.$t('message.login.password')

@@ -26,7 +26,6 @@ export default {
 		PageHeader
 	},
 	mounted() {
-		document.title = this.thisTitle
 	  
 	},
 	created() {

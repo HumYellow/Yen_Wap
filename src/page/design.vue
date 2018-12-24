@@ -3,8 +3,7 @@
 </style>
 <template>
 	<div id="design">
-
-	    <keep-alive>
+		<keep-alive>
 			<DesignList></DesignList>
 		</keep-alive>
 		<!-- <ContactWhole></ContactWhole> -->
@@ -12,7 +11,6 @@
 	</div>
 </template>
 <script type="text/javascript">
-import DesignFilter from '@/components/design/DesignFilter'
 import DesignHead from '@/components/design/DesignHead'
 import DesignList from '@/components/design/DesignList'
 import ContactWhole from '@/components/ContactWhole'
@@ -20,7 +18,6 @@ import MyFooter from '@/components/MyFooter'
 export default {
 	name:'design',
 	components:{
-		DesignFilter,
 		DesignHead,
 		DesignList,
 		ContactWhole,
@@ -31,8 +28,7 @@ export default {
 
 		}
 	},
-	mounted:()=>{
-		document.title = 'design'
+	mounted(){
 	}
 }
 </script>

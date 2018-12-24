@@ -7,7 +7,6 @@
 .filterBox .filter-enter, .filterBox .filter-leave-to /* .contactWhole-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
-
 </style>
 <template>
 	<div class="filterBox">

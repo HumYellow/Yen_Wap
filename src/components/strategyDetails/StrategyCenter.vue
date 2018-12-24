@@ -3,6 +3,7 @@
 .strategyCenter .strategyCenterTitle h3{font-size:18px; font-weight:400; color:#333; }
 .strategyCenter .strategyCenterSubtitle{padding-top:15px;font-size:14px; color:#999;}
 .strategyCenter .strategyCenterText .summary{padding:20px;background:#f8f8f8;}
+.strategyCenter .strategyCenterText img{display:inline-block;}
 .strategyCenter .strategyCenterText p{margin-top:20px;color:#666666; line-height:5.5vw;font-size:3.8vw;}
 .strategyCenterImg{overflow:hidden;border-radius:5px;margin-bottom:30px;}
 </style>

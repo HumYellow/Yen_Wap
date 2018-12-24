@@ -1,5 +1,5 @@
 <style type="text/css">
-.eject{position:fixed;left:0;top:0;z-index:9999;width:100vw;height:100vh;}
+.eject{position:fixed;left:0;top:0;z-index:998;width:100vw;height:100vh;}
 .eject .ejectBg{background:rgba(0,0,0,.5);width:100%;height:100%;}
 </style>
 <template>

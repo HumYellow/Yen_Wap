@@ -1,10 +1,12 @@
 <style type="text/css">
 .personalDataList{background:#fff;border-top:20px solid #f5f5f5;}
-.personalDataMod.contTo{background:none;}
 
-.personalDataMod{width:85%;margin:0 5%;border-bottom:1px solid #eee;height:30px;padding:10px 0; font-size:3.5vw;color:#333;display:block;background:url('/static/image/myCenter/rightToIcon2.png') right center no-repeat;background-size:10px auto;padding-right:5%;}
+.personalDataMod{width:89%;margin:0 3%;border-bottom:1px solid #eee;padding:10px 0; font-size:3.5vw;color:#333;display:block;background:url('/static/image/myCenter/rightToIcon2.png') right center no-repeat;background-size:10px auto;padding-right:5%;}
+.personalDataMod.contTo{border-bottom:none;}
+.personalDataBox .showPhone{text-align:right;display:flex;flex-direction:row-reverse;align-items: center;align-content: flex-end;line-height:14px;font-size:12px;padding:10px 3% 10px 0;box-sizing: border-box;}
+.personalDataBox .showPhone img{width:16px;height:16px;margin-left:10px;}
 .personalDataHead{height:45px;position:relative;}
-.personalDataTitle{float:left;width:40%;line-height:30px;}
+.personalDataTitle{float:left;width:50%;line-height:30px;}
 .personalDataDesc{float:right;height:100%;line-height:30px;text-align:right;}
 .personalDataHead .personalDataTitle{line-height:45px;}
 .personalDataHead .personalDataDesc{width:45px;height:45px;overflow:hidden;border-radius:50%;}
@@ -24,9 +26,16 @@
 				</div>
 				<input v-if="!fileing" @change="fileImage" type="file" accept="image/jpeg,image/x-png,image/gif" value="" id=""  />
 			</div>
-			<div class="personalDataMod contTo clear">
-				<div class="personalDataTitle">{{$t('message.login.phone')}}</div>
-				<div class="personalDataDesc">{{personalData.phone}}</div>
+			<div class="personalDataMod contTo">
+				<router-link class="clear" to="/personalData/modifyPhone">
+					<div class="personalDataTitle">{{$t('message.login.phone')}}</div>
+					<div class="personalDataDesc">{{personalData.phone}}</div>
+				</router-link>
+			</div>
+			<div class="showPhone" @click="showPhoneTab">
+				<img v-if="this.personalData.showPhone" src="/static/image/readSelect.png" />
+				<img v-else src="/static/image/readNoSelect.png" />
+				<span>{{$t('message.myCenter.personalData.showPhoneText')}}</span>
 			</div>
 			<router-link to="/personalData/chooseCity" class="personalDataMod clear">
 				<div class="personalDataTitle">{{$t('message.myCenter.personalData.city')}}</div>
@@ -58,7 +67,7 @@ export default {
 		return {
 			personalData:{},
 			personalTypeData:{},
-			fileing:false
+			fileing:false,
 		}
 	},
 	mounted(){
@@ -105,6 +114,17 @@ export default {
 			.then((res)=>{
 				this.$set(this.personalData,'headImg',url)
 			})
+        },
+        showPhoneTab:function(){
+        	var isShowPhone = this.personalData.showPhone?0:1
+        	this.$post('/home/member/updateShowPhoneData',{
+				showPhone:isShowPhone
+			})
+			.then((res)=>{
+        		this.$set(this.personalData,'showPhone', isShowPhone)
+				
+			})
+
         }
 		
 	},

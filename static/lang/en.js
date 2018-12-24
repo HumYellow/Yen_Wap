@@ -8,7 +8,8 @@ module.exports={
 		Strategy:'Strategy',
 		Guarantee:'Guarantee',
 		Calculate:'Calculate',
-		Mine:'Mine'
+		Mine:'Mine',
+		HoChiMing:'Ho Chi Ming'
 	},
 	login:{
 		login:'Login',
@@ -17,6 +18,7 @@ module.exports={
 		password:'Password',
 		againPassword:'Again password',
 		get:'Get',
+		getCode:'Get',
 		getVerificationCode:'get verification code',
 		inputVerificationCode:'input verification code',
 		logout:'logout',
@@ -24,6 +26,10 @@ module.exports={
 		newUse:'New use',
 		passwordError:'The password is at least 8 bits  and must contain numbers and letters',
 		submit:'Submit',
+	},
+	register:{
+		agreementText1:'I have read and accepted ',
+		agreementText2:'《YEN User Service term》',
 	},
 	tips:{
 		titleMsg:'message',
@@ -57,7 +63,8 @@ module.exports={
 		pleaseEvaluation:'Please input your evaluation',
 		uploadPic:'Upload a picture',
 		freeApplication:'Free application',
-		freeQuotation:'Free quotation'
+		freeQuotation:'Free quotation',
+		addPicMod:'/static/image/myCenter/addPicMod_en.png',
     },
     aboutUs:{
     	inputCompanyName:'Input company name',
@@ -87,6 +94,9 @@ module.exports={
     	decorationService:'Decoration service',
     	freeDesign:'Free design for me',
 		businessLicense:'Business license',
+    },
+    guarantee:{
+    	title:'Guarantee'
     },
     strategy:{
     	strategMenu:{
@@ -211,6 +221,7 @@ module.exports={
 			city:'City',
 			currentProfilePhoto:'Current profile photo',
 			uploadProfilePhoto:'Upload Profile Photo',
+			showPhoneText:'Show contact information to other users',
 			save:'Save',
 			edit:'Edit',
 			post:'Post',
@@ -224,11 +235,31 @@ module.exports={
 		termsOfService:'Terms of Service',
 		aboutUs:'About Us',
 		connectUs:'Connect Us',
+		feedback:'Feedback',
 		businessCooperation:'Business Cooperation',
 		settings:'Settings',
 		disclaimer:'Disclaimer: Some of the contents of this website are uploaded by users themselves. If the obligee find that there is misrepresentation of his works, please contact this website in time.',
-		
+		feedbackMod:{
+			writeDown:'Write down your questions or suggestions',
+			myFeedback:'My feedback',
+			contactNumber:'Contact number',
+			recovered:'Recovered',
+			unanswered:'Unanswered',
+			haventReceived:"You haven't received any feedback yet."
+
+		},
+		uploadAlbum:'Upload album'
 	},
+	modifyPhone:{
+		modifyPhoneTitle:'Modify Binding Mobile Phone',
+		verify:'Verify',
+		boundPhone:'Please enter your bound phone number.',
+		validationCode:'Please enter the validation code',
+		getCode:'Get code',
+		finish:'Finish',
+		newPhone:'Please enter the new phone number',
+		validationCode:'Please enter the validation code'
+	}
 
   }
 }

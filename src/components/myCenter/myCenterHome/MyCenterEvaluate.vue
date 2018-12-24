@@ -12,7 +12,7 @@
 </style>
 <template>
 	<div id="myCenterEvaluate">
-		<PageHeader thisTitle="Đánh giá"></PageHeader>
+		<PageHeader :thisTitle="$t('message.myCenter.evaluate')"></PageHeader>
 		<div class="evaluate">
 			<div class="starList clear">
 				<div class="starBox" v-for="(star ,index) in star" @click="starClick(index)">
@@ -88,10 +88,7 @@ export default {
         },
   		subDate:function(){
   			if(!this.evaluateDate.star){
-  				this.$layer.msg('Vui lòng đánh giá',{
-					title:'message',
-					btn:'OK'
-				})
+  				this.$layer.msg('Vui lòng đánh giá')
 				return
   			}
   			this.$post('/home/order/comment/addData',this.evaluateDate)
@@ -100,15 +97,14 @@ export default {
 					this.$router.push('/myCenter')
 				}else{
 	  				this.$layer.alert(res.msg,{
-						title:'message',
-						btn:'OK'
+						title:this.$t('message.tips.titleMsg'),
+						btn:this.$t('message.tips.ok')
 					})
 				}
 			})
   		},
     },
-	mounted:()=>{
-		document.title = 'Evaluate'
+	mounted(){
 	},
 	created(){
 	},

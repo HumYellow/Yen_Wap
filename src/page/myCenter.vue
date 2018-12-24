@@ -30,7 +30,6 @@ export default {
 		MyCenterCollection
 	},
 	mounted() {
-		document.title = 'myCenter'
 	  
 	}
 }

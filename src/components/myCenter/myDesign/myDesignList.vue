@@ -164,7 +164,10 @@ export default {
 				}
 				var box = el.getElementsByClassName('default-card-animation')
 				if(this.getHeightTime > this.getHeightMaxTime){
-					this.$layer.alert(this.$t('message.tips.againLater'))
+					this.$layer.alert(this.$t('message.tips.againLater'),{
+						title:this.$t('message.tips.titleMsg'),
+						btn:this.$t('message.tips.ok')
+					})
 				}
 				if(box.length == 0 && this.getHeightTime <= this.getHeightMaxTime){//判断是不是imgdom未加载
 					this.getHeightArr = false

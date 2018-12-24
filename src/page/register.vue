@@ -49,7 +49,7 @@ background-size:auto 50%;background-position:17px 12px;} */
 				<span class="selectMod" @click="readTab">
 					<img width="100%" :src="readUrl" />
 				</span>
-				<p>Tôi đã đọc và đồng ý với <router-link to="/termsService">《Thỏa thuận người dùng của Yến trời》</router-link></p>
+				<p>{{$t("message.register.agreementText1")}} <router-link to="/termsService">{{$t("message.register.agreementText2")}}</router-link></p>
 			</div>
 			<a class="toregister" @click="register()">{{$t("message.login.register")}}</a>
 			<p class="otherLink">
@@ -100,7 +100,7 @@ export default {
 				if(data[a] == ''){
 					this.contSub = false
 					let nullName;
-					if(a == 'userName' && a == 'phone'){
+					if(a == 'userName' || a == 'phone'){
 						nullName = this.$t('message.login.phone')
 					}else if(a == 'password'){
 						nullName = this.$t('message.login.password')

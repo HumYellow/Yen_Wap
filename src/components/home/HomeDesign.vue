@@ -52,7 +52,6 @@ export default {
 		}
 	},
 	mounted(){
-		
 	},
 	created(){
 		this.$fetch('/recommend/designListData?type=11&subDesignNumber=2')

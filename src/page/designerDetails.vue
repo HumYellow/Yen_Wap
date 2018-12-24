@@ -21,7 +21,6 @@ export default {
 	methods:{
 	},
 	mounted(){
-		document.title = 'designerDetails';
 		
 	}
 }

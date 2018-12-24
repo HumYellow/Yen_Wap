@@ -14,6 +14,14 @@
 #myHeader .loginMod a{color:#333;display:block; height:40%;width:80%;margin-right:5vw;text-align:center;margin:0 auto;}
 #myHeader .loginMod a img{margin:15px auto;}
 #myHeader .loginMod a.userNameBox{height:100%;padding:0;overflow: hidden;text-overflow: ellipsis;}
+#myHeader .langTab{float:left;width:20%;height:100%;position:relative;}
+#myHeader .langTabBox{display: flex;justify-content: center;align-items: center;}
+#myHeader .langTab .langArrowUp{width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent;
+    border-bottom:5px solid #000;margin-left:5px;}
+#myHeader .langTab .langArrowDown {width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent;border-top:5px solid #000;margin-left:5px;}
+#myHeader .langTab .langTabList{position:absolute;right:20px;top:40px;}
+#myHeader .langTab .langTabMod{width:50px;background:rgba(86,86,86,.8);color:#fff;border-radius:3px;text-align:center;margin:0 auto;font-size:12px;line-height:40px;}
+#myHeader .langTab .langTabMod p{border-top:.5px solid rgba(255,255,255,.4);}
 #myHeader .menu-enter-active, #myHeader .menu-leave-active {
   transition: opacity .4s;
 }
@@ -25,25 +33,39 @@
 	<div id="myHeader">
 		<div class="header">
 			<div class="loginNav">
-				<div class="menuCity">Hồ Chí Minh</div>
+				<div class="menuCity">{{$t('message.menu.HoChiMing')}}</div>
 				<!-- <div class="menuBtn" @click="menuShowSwitch">菜单</div> -->
 				<router-link to="/placeOrder" class="toCount">
 					Miễn phí Thiết kế >
 				</router-link>
-				<div v-if="isLogin" class="loginMod">
+				<!-- <div v-if="isLogin" class="loginMod">
 					<router-link to="/myCenter">
-						<!-- {{user.username}} -->
+						{{user.username}}
 						<img height="100%" src="/static/image/login.png" />
 					</router-link>
-					<!-- <a @click="signOut">退出</a> -->
+					<a @click="signOut">退出</a>
 				</div>
 				<div class="loginMod" v-else>
-					<!-- <router-link v-if="showHead" to="/login">
+					<router-link v-if="showHead" to="/login">
 						<img src="" />
-					</router-link> -->
+					</router-link>
 					<router-link to="/login">
 						<img height="100%" src="/static/image/login.png" />
 					</router-link>
+				</div> -->
+				<div class="langTab">
+					<div class="langTabBox" @click="langTabOpenFn">
+						<span v-if="lang == 'EN'">EN</span>
+						<span v-else>VN</span>
+						<span v-if="langTabOpen" class="langArrowUp"></span>
+						<span v-else class="langArrowDown"></span>
+					</div>
+					<div class="langTabList" v-if="langTabOpen">
+						<div class="langTabMod">
+							<p @click="langTabFn('VN')">VN</p>
+							<p @click="langTabFn('EN')">EN</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<transition name="menu">
@@ -76,7 +98,7 @@ export default{
 		return{
 			showHead:true,
 			noShowList:['/login'],
-			lang:this.$store.state.lang,
+			lang:this.$swallow.localStorageGet("lang"),
 			contactShow:true,
 			path:{
 				home:'',
@@ -92,6 +114,7 @@ export default{
 			menuShow:false,
 			ejectShow:false,
 			ejectType:{},
+			langTabOpen:false
 		}
 	},
 	computed:{
@@ -133,6 +156,16 @@ export default{
 			this.menuShow = false
 			this.ejectShow = false
 			this.$swallow.move()
+		},
+		langTabFn:function(lang){
+			this.$swallow.localStorageSet("lang",lang)
+			window.history.go(0)
+			/*this.$i18n.locale = lang
+			this.lang = this.$swallow.localStorageGet('lang')
+			this.langTabOpenFn()*/
+		},
+		langTabOpenFn:function(){
+			this.langTabOpen = !this.langTabOpen
 		}
 	},
 	mounted:function(){

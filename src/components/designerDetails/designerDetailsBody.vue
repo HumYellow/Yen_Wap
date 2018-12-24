@@ -2,6 +2,7 @@
 .designerDetails .designerDetailsHeader{background:url('/static/image/designerDetailsHead.png') no-repeat;height:80px; background-size:100% 100%;position:relative;}
 .designerDetails .designerDetailsHeader .backLink{height:20px;position:absolute;left:10px;top:20px;}
 .designerDetails .designerDetailsDesc{background:url('/static/image/designerDetailsDesc.png') no-repeat;height:100px;background-size:100% 100%;position:relative;top:-20px;width:95%;margin:0 auto;}
+.designerDetails .designerDetailsDesc .contactHe{color:#fff;background:#3fbb87;border-radius:5px; width:100px;display:block;position:absolute;bottom:-10px;left:50%;margin-left:-50px;text-align:center;height:30px;line-height:30px;}
 .designerDetailsDescBox{width:25vw;margin:0 auto;position:relative;top:-5vw;box-sizing: border-box;text-align:center;}
 .designerDetailsDescBox img{margin:0 auto;height:15vw;width:15vw;border-radius:50%;}
 .designerDetailsDescBox .designerDescTitle{margin-top:15px;}
@@ -22,6 +23,7 @@
 				<img :src="designerDesc.headImg" />
 				<div class="designerDescTitle">{{designerDesc.title}}</div>
 			</div>
+			<a v-if="designerDesc.phone" class="contactHe" :href="'tel:' + designerDesc.phone">Liên hệ</a>
 		</div>
 		<div class="designPicList">
 			<router-link :to="'/designDetails/'+design.designAtlasId" class="designPicListMod" v-for="design in designList">

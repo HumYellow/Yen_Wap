@@ -285,8 +285,8 @@ export default {
             var imgSize=file.size/1024;
             if(imgSize>2000){
             	this.$layer.alert('Please upload pictures of size not exceeding 2000KB.',{
-					title:'tips',
-					btn:'OK'
+					title:this.$t('message.tips.titleMsg'),
+					btn:this.$t('message.tips.ok')
 				})
             }else{         
 				var file = e.target.files[0];      

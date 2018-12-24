@@ -7,15 +7,19 @@
 #strategyList .menuSecondMod[data-swich="select"]{color:#339966;}
 #strategyList .menuSecondMod img{margin:0 auto 10px;}
 #strategyList .strategyListMod{box-shadow: 1px -1px 20px #e9e9e9;padding:3vw;border-radius:10px;margin-bottom:3vw;}
-#strategyList .strategyListBox{margin-top:5px;}
+#strategyList .strategyListBox{margin-top:5px;display: flex;justify-content: center;}
 #strategyList .strategyListMod h3{font-size:4vw;line-height:8vw;font-weight:400;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
-#strategyList .strategyListImd{width:40%;height:25vw;float:left;overflow:hidden;border-radius:10px;}
-#strategyList .strategyListDesc{width:60%;font-size:3.2vw;float:left;color:#999;padding:2vw 0 0 2vw;box-sizing: border-box;overflow:hidden;line-height:3.5vw;
+#strategyList .strategyListImd{width:40%;height:25vw;overflow:hidden;border-radius:10px;}
+#strategyList .strategyListDescBox{width:60%;font-size:3.2vw;color:#999;padding:0 0 0 5vw;box-sizing: border-box;}
+#strategyList .strategyListDescBox .strategySummary{line-height:3.5vw;overflow:hidden;
 	text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;}
-
+#strategyList .strategyListDescBox .strategyListDesc{height:25px;line-height:25px;display: flex;justify-content: center;align-items: center}
+#strategyList .strategyListDescBox .strategyListDesc span.strategyTime{width:80px;}
+#strategyList .strategyListDescBox .strategyListDesc span.strategySeen{width:calc(100% - 130px);background:url('/static/image/seenIcon.png') left center no-repeat;background-size:auto 50%;box-sizing: border-box;padding-left:25px;}
+#strategyList .strategyListDescBox .strategyListDesc span.strategyShare ,#strategyList .strategyListDescBox .strategyListDesc span.strategyCollection{margin-left:10px;width:15px;}
 </style>
 <template>
 	<div id="strategyList" class="strategyList">
@@ -33,11 +37,26 @@
 		<div v-for="strategy in strategyList" class="strategyListMod">
 			<router-link class="clear" :to="'/strategyDetails/'+strategy.id">
 				<h3>{{strategy.title}}</h3>
-				<div class="strategyListBox clear">
+				<div class="strategyListBox">
 					<div class="strategyListImd" v-if="strategy.img">
 						<img width="100%" :src="strategy.img" />
 					</div>
-					<div class="strategyListDesc">{{strategy.summary}}</div>
+					<div class="strategyListDescBox">
+						<div class="strategySummary">
+							{{strategy.summary}}
+						</div>
+						<!-- <div class="strategyListDesc">
+							<span class="strategyTime">{{strategy.createTime}}</span>
+							<span class="strategySeen">{{strategy.viewCount}}</span>
+							<span class="strategyShare">
+								<img class="shareImg" width="14" height="14" src="/static/image/share.png" />
+							</span>
+							<span class="strategyCollection" @click="collectionFn($event,index)">
+								<img v-if="strategy.collect" :data-id="imgs.designAtlasId" class="collectionImg" width="14" src="/static/image/collectionFinish.png" />
+								<img v-else class="collectionImg" width="14" src="/static/image/collection.png" />
+							</span>
+						</div> -->
+					</div>
 				</div>
 			</router-link>
 		</div>
@@ -204,6 +223,9 @@ export default {
 				}
 			}
 		},
+		collectionFn:function(){
+
+		}
 	},
 	created(){
 		this.getData()

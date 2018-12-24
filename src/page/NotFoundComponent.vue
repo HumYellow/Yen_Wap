@@ -1,3 +1,6 @@
+<style type="text/css">
+
+</style>
 <template>
 	<div class="">
 	</div>
@@ -22,6 +25,3 @@ export default {
 	}
 }
 </script>
-<style type="text/css">
-
-</style>

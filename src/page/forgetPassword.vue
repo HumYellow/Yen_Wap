@@ -9,7 +9,7 @@
 </style>
 <template>
 	<div id="forgetPassword">
-		<PageHeader :thisTitle="thisTitle"></PageHeader>
+		<PageHeader :thisTitle="$t('message.login.forgetPassword')"></PageHeader>
 		<div class="forgetPasswordMod">
 			<input :class="phone == ''&&this.null?'null':''" v-model="phone" :placeholder="$t('message.login.phone')" oninput="value=value.replace(/[^\d]/g,'')" maxlength="10" />
 		</div>
@@ -38,7 +38,6 @@ export default {
 	},
 	data(){
 		return {
-			thisTitle:'Quên mật khẩu của bạn',
 			contSub:true,
 			phone:'',
 			dynamicCode:'',
@@ -56,7 +55,6 @@ export default {
 		}
 	},
 	mounted:()=>{
-		document.title = 'Forget the password'
 	},
 	methods:{
 		forgetPassword:function(){
@@ -71,7 +69,7 @@ export default {
 				if(data[a] == ''){
 					this.contSub = false
 					let nullName;
-					if(a == 'userName' && a == 'phone'){
+					if(a == 'userName' || a == 'phone'){
 						nullName = this.$t('message.login.phone')
 					}else if(a == 'password'){
 						nullName = this.$t('message.login.password')

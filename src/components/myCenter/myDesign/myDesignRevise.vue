@@ -24,7 +24,7 @@
 			</div>
 			<div class="picList clear">
 				<div class="picMod">
-					<img width="100%" src="/static/image/myCenter/addPicMod.png" />
+					<img width="100%" :src="$t('message.placeOrder.addPicMod')" />
 	            	<input v-if="!fileing" @change="fileImage" type="file" accept="image/jpeg,image/x-png,image/gif" value="" id="" class="fileImage"  />
 				</div>
 				<div class="picMod" v-for="(slide ,index) in subDesignList">

@@ -38,7 +38,6 @@ export default {
 		}
 	},
 	mounted() {
-		document.title = 'collection'
 	},
 	created(){
 		

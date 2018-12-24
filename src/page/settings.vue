@@ -10,6 +10,9 @@
 		<PageHeader :thisTitle="$t('message.myFooter.settings')"></PageHeader>
 		<div class="settingsList">
 			<div class="settingsMod">
+				<router-link to="/feedback">{{$t("message.myFooter.feedback")}}</router-link>
+			</div>
+			<div class="settingsMod">
 				<router-link to="/termsService">{{$t("message.myFooter.termsOfService")}}</router-link>
 			</div>
 			<div class="settingsMod">

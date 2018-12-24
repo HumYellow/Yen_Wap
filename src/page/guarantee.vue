@@ -22,7 +22,6 @@ export default {
 		PageHeader,
 	},
 	mounted(){
-		document.title = this.thisTitle
 		this.getPic()
 	},
 	methods:{

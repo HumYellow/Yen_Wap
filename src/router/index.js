@@ -34,11 +34,16 @@ import personalData from '@/page/personalData'
 import personalDataList from '@/components/personalData/personalDataList'
 import chooseCity from '@/components/personalData/chooseCity'
 import acreage from '@/components/personalData/acreage'
+import modifyPhone from '@/components/personalData/modifyPhone'
+import modifyPhoneFinish from '@/components/personalData/modifyPhoneFinish'
 import chooseType from '@/components/personalData/chooseType'
 import chooseStyle from '@/components/personalData/chooseStyle'
 
 
 import settings from '@/page/settings'
+import feedback from '@/page/feedback/feedback'
+import feedbackList from '@/page/feedback/feedbackList'
+import feedbackOnline from '@/page/feedback/feedbackOnline'
 import contactUs from '@/components/myCenter/setUp/contactUs'
 import aboutUs from '@/components/myCenter/setUp/aboutUs'
 import termsService from '@/components/myCenter/setUp/termsService'
@@ -272,6 +277,22 @@ export default new Router({
           }
         },
         {
+          path:'modifyPhone',
+          component: modifyPhone,
+          name:'modifyPhone',
+          meta:{
+            requireLogin:true,
+          },
+        },
+        {
+          path:'modifyPhoneFinish',
+          component: modifyPhoneFinish,
+          name:'modifyPhoneFinish',
+          meta:{
+            requireLogin:true,
+          },
+        },
+        {
           path:'chooseStyle',
           component: chooseStyle,
           name:'chooseStyle',
@@ -296,6 +317,33 @@ export default new Router({
       name:'settings',
       meta:{
         type:'settings',
+        requireLogin:true,
+      }
+    },
+    {
+      path:'/feedback',
+      component: feedback,
+      name:'feedback',
+      meta:{
+        type:'feedback',
+        requireLogin:true,
+      }
+    },
+    {
+      path:'/feedbackList',
+      component: feedbackList,
+      name:'feedbackList',
+      meta:{
+        type:'feedbackList',
+        requireLogin:true,
+      }
+    },
+    {
+      path:'/feedbackOnline/:id',
+      component: feedbackOnline,
+      name:'feedbackOnline',
+      meta:{
+        type:'feedbackOnline',
         requireLogin:true,
       }
     },

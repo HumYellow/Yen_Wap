@@ -236,7 +236,6 @@ export default {
 					'companyTypeIds':this.companyTypeIds
 				};
 			}
-			console.info(data)
 			this.$fetch(url,data)
 			.then((res)=>{
 				if(res.data.length < this.companyNum)this.lastPage = true//判断是否最后一页
@@ -303,6 +302,11 @@ export default {
 							this.$set(this.companyList[a],'collect',thisCollect==1?0:1)
 						}
 					}
+				}else{
+	  				this.$layer.alert(res.msg,{
+						title:'message',
+						btn:'OK'
+					})
 				}
 			})
 		}

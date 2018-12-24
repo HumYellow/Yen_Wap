@@ -13,6 +13,7 @@ body{background:#fff;}
 		<HomeDesign></HomeDesign>
 		<HomeCompany></HomeCompany>
 		<MyFooter></MyFooter>
+		<HomeShortcut></HomeShortcut>
 		<!-- <ContactWhole></ContactWhole>
 		<Eject :ejectType="ejectType"></Eject> -->
 	</div>
@@ -24,6 +25,8 @@ import HomeMenu from '@/components/home/HomeMenu'
 import HomeDesignType from '@/components/home/HomeDesignType'
 import HomeCompany from '@/components/home/HomeCompany'
 import HomeDesign from '@/components/home/HomeDesign'
+import HomeShortcut from '@/components/home/HomeShortcut'
+
 import MyFooter from '@/components/MyFooter'
 import ContactWhole from '@/components/ContactWhole'
 import Eject from '@/components/public/eject/Eject'
@@ -36,6 +39,7 @@ export default {
 		HomeDesignType,
 		HomeCompany,
 		HomeDesign,
+		HomeShortcut,
 		MyFooter,
 		ContactWhole,
 		Eject
@@ -51,7 +55,6 @@ export default {
 	methods:{
 	},
 	mounted(){
-		document.title = 'home';
 		
 	}
 }

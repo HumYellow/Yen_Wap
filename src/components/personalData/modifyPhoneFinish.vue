@@ -20,7 +20,7 @@
 			</a>
 		</div>
 		<div class="modifyPhoneMod">
-			<input v-model="dynamicCode" oninput="value=value.replace(/[^\d]/g,'')" :placeholder="$t('message.modifyPhone.validationCode')" maxlength="4" />
+			<input v-model="dynamicCode" oninput="value=value.replace(/[^\d]/g,'')" :placeholder="$t('message.modifyPhone.validationCode2')" maxlength="4" />
 			<a v-if="!verifyGeting" class="getVerify" @click="getVerify">{{$t('message.modifyPhone.getCode')}}</a>
 			<a v-else class="getVerify verifyGeting">{{countdownData.sec}}S</a>
 		</div>

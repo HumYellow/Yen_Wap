@@ -43,9 +43,9 @@ export default {
 					if(a == 'userName' || a == 'phone'){
 						nullName = this.$t('message.login.phone')
 					}else if(a == 'content'){
-						nullName = 'Nội dung'
+						nullName = this.$t('message.myFooter.feedback')
 					}
-					this.$layer.alert('Vui lòng nhập '+nullName+' và Mật khẩu',{
+					this.$layer.alert(this.$t('message.login.pleaseInput')+' '+nullName,{
 						title:this.$t('message.tips.titleMsg'),
 						btn:this.$t('message.tips.ok')
 					})

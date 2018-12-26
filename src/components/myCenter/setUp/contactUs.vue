@@ -6,9 +6,10 @@
 	<div>
 		<PageHeader v-if="!isApp" :thisTitle="$t('message.myFooter.connectUs')"></PageHeader>
 		<div class="textBody" id="contactUs">
-			<p>Điện thoại: +84 (28) 3910.0635</p> 
+			<p v-html="contactUs"></p>
+			<!-- <p>Điện thoại: +84 (28) 3910.0635</p> 
 			<p>Email: yenttroi@yenttroi.com </p> 
-			<p>Địa chỉ: Vietcombank Tower, số 5 Công trường Mê Linh, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p>
+			<p>Địa chỉ: Vietcombank Tower, số 5 Công trường Mê Linh, phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh</p> -->
 		</div>
 	</div>
 </template>
@@ -19,17 +20,25 @@ export default {
 	data() {
 	  return {
 	  	thisTitle:this.$t('message.myFooter.connectUs'),
-	  	isApp:this.$route.query.app
+	  	isApp:this.$route.query.app,
+	  	contactUs:'',
 	  }
 	},
 	components: {
 		PageHeader
 	},
-	mounted() {
-	  
+	methods:{
+		getData:function(){
+			this.$fetch('/article/connectUsData')
+			.then((res)=>{
+				this.contactUs = res.data
+			})
+		}
 	},
-	created() {
-
+	mounted(){
 	},
+	created(){
+		this.getData()
+	}
 }
 </script>

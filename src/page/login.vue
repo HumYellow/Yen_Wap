@@ -73,7 +73,7 @@ export default {
 					}else if(a == 'password'){
 						nullName = this.$t('message.login.password')
 					}
-					this.$layer.alert('Vui lòng nhập '+nullName+' và Mật khẩu',{
+					this.$layer.alert(this.$t('message.login.pleaseInput')+' '+nullName,{
 						title:this.$t('message.tips.titleMsg'),
 						btn:this.$t('message.tips.ok')
 					})

@@ -9,13 +9,15 @@ module.exports={
 		Guarantee:'Guarantee',
 		Calculate:'Calculate',
 		Mine:'Mine',
-		HoChiMing:'Ho Chi Ming'
+		HoChiMing:'Ho Chi Ming',
+		freeQuotation:'Free quotation'
 	},
 	login:{
 		login:'Login',
 		register:'Register',
 		phone:'Phone',
 		password:'Password',
+		pleaseInput:'Please input',
 		againPassword:'Again password',
 		get:'Get',
 		getCode:'Get',
@@ -77,6 +79,7 @@ module.exports={
     	atlasInformation:'Atlas information',
     	designDetails:'Design Details',
     	pictures:'pictures',
+    	contact:'Contact'
 
     },
     company:{
@@ -245,7 +248,8 @@ module.exports={
 			contactNumber:'Contact number',
 			recovered:'Recovered',
 			unanswered:'Unanswered',
-			haventReceived:"You haven't received any feedback yet."
+			haventReceived:"You haven't received any feedback yet.",
+			feedbackRecord:'Feedback record',
 
 		},
 		uploadAlbum:'Upload album'
@@ -258,7 +262,7 @@ module.exports={
 		getCode:'Get code',
 		finish:'Finish',
 		newPhone:'Please enter the new phone number',
-		validationCode:'Please enter the validation code'
+		validationCode2:'Please enter the validation code'
 	}
 
   }

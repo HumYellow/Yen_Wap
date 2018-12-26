@@ -111,7 +111,7 @@ export default {
 						})
 						return
 					}
-					this.$layer.alert('Vui lòng nhập '+nullName+' và Mật khẩu',{
+					this.$layer.alert(this.$t('message.login.pleaseInput')+' '+nullName,{
 						title:this.$t('message.tips.titleMsg'),
 						btn:this.$t('message.tips.ok')
 					})

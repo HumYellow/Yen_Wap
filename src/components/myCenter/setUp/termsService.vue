@@ -7,10 +7,11 @@
 	<div>
 		<PageHeader v-if="!isApp" :thisTitle="$t('message.myFooter.termsOfService')"></PageHeader>
 		<div class="textBody" id="termsService">
-			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chào mừng Bạn đến với <b>Yến Trời</b> !
+			<p v-html="termsService"></p>
+			<!-- <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chào mừng Bạn đến với <b>Yến Trời</b> !
 			Để sử dụng dịch vụ của Yến Trời, Bạn nên đọc và tuân thủ “Thỏa thuận sử dụng dịch vụ của <b>Yến Trời</b>” (được gọi tắt là “ Thoả Thuận”). Hãy chắc chắn rằng Bạn đã đọc kỹ và hiểu đúng,  đầy đủ về các điều khoản. Khi Bạn sử dụng dịch vụ của Yến trời thì hành vi đó được coi là Bạn đã đọc và đồng ý đồng thời bị ràng buộc bởi các “Thỏa Thuận” trên.
 			Nếu Bạn dưới 18 tuổi, vui lòng đọc thỏa thuận này cùng một người giám hộ hợp pháp và đặc biệt chú ý đến các điều khoản sử dụng dành cho người chưa thành niên.</p>
-
+			
 			<h4>1.Phạm vi của thỏa thuận</h4>
 			<p>1.1 Thỏa thuận này là hợp đồng giữa Người dùng và <b>Yến Trời</b> trên trang web YEN (bao gồm nhưng không giới hạn ở www.yentroi.com, v.v., sau đây được gọi là "Trang web") và các vấn đề liên quan khác. <b>Yến Trời</b> có nghĩa là Công ty trách nhiệm hữu hạn công nghệ <b>Yến Trời</b> (sau đây gọi tắt là "Công ty <b>Yến trời</b>" hay “YEN”) và các dịch vụ liên quan của nó có thể tồn tại trong các đơn vị hoạt động liên quan. "Người dùng" nghĩa là người dùng sử dụng các dịch vụ liên quan đến <b>Yến Trời</b>, bao gồm cả người dùng đã đăng ký và người dùng chưa đăng ký và được gọi là Bạn trong Thỏa thuận này. Người dùng được yêu cầu đọc kỹ thỏa thuận này trước khi truy cập và đăng ký và sử dụng dịch vụ mạng do YEN cung cấp. Người dùng truy cập hoặc đăng ký và sử dụng dịch vụ do YEN cung cấp sẽ được coi là đã đồng ý và chấp nhận các điều khoản của Thỏa thuận này. .Bất kỳ thông báo, quy tắc, thỏa thuận, thông báo công khai, vv trên trang web này được coi là một phần không tách rời của thỏa thuận này. Khi nội dung xung đột với nhau, nội dung pháp lý mới nhất sẽ được áp dụng.</p>
 			<p>1.2Các dịch vụ theo Thỏa thuận này đề cập đến internet và các dịch vụ có liên quan được cung cấp bởi trang web www.yentroi.com và các trang web liên quan (bao gồm nhưng không giới hạn đối với website \ di động \ app \ h5) và các dạng dịch vụ mạng khác, bao gồm nhưng không giới hạn đối với nhắn tin tức thời, phương tiện trực tuyến, giá trị gia tăng trên Internet, thương mại điện tử và các sản phẩm và dịch vụ quảng cáo (sau đây gọi là Dịch vụ).</p>
@@ -26,7 +27,7 @@
 			<p>(2) Theo các quy định có liên quan của "Luật an ninh mạng” của nước Cộng hoà xã hội chủ nghĩa Việt Nam, thông tin đăng ký Người dùng phải là thông tin thực sự của người đó và chịu trách nhiệm về tính xác thực của thông tin. Bạn nên duy trì và cập nhật thông tin người dùng cá nhân của mình để đảm bảo rằng thông tin đó là đúng, chính xác, hiện tại và đầy đủ. Nếu Bạn cung cấp bất kỳ thông tin sai sự thật, không chính xác, quá hạn hoặc không đầy đủ, và để xác định YEN có căn cứ hợp lý để nghi ngờ rằng thông tin đó là không đúng sự thật, không chính xác, quá hạn hoặc không đầy đủ, YEN có quyền tạm dừng hoặc chấm dứt Tài khoản của Bạn tại YEN và từ chối sử dụng toàn bộ hoặc một phần dịch vụ của Bạn ngay bây giờ và trong tương lai.</p>
 			<p>(3) Việc truy cập, đăng ký, sử dụng, vv đại diện cho sự đồng ý đầy đủ của Bạn với Thỏa thuận này, có nghĩa là Bạn có thể tự chịu trách nhiệm pháp lý để xác nhận rằng Bạn có các quyền và khả năng thích hợp để hưởng các dịch vụ của Trang web, thực hiện các cuộc hẹn cho các dịch vụ và giao dịch. Bạn xác nhận rằng nếu Bạn dưới 18 tuổi, Bạn chỉ có thể sử dụng Trang web với sự tham gia của cha mẹ hoặc người giám hộ khác. </p>
 			<p>(4) YEN có quyền từ chối dịch vụ, đóng tài khoản người dùng, xóa hoặc chỉnh sửa nội dung hoặc hủy cuộc hẹn, chỉ trong phạm vi qui định trong giời hạn YEN cho phép. YEN có quyền sửa đổi hoặc ngừng dịch vụ và không chịu trách nhiệm cho người dùng hoặc bất kỳ bên thứ ba nào không liên quan trực tiếp.</p>
-
+			
 			<h4>3.Cung cấp dịch vụ theo hiện trạng</h4>
 			<p>3.1 Người dùng hiểu và đồng ý rằng các dịch vụ của YEN được cung cấp phù hợp với tình trạng hiện tại của điều kiện kĩ thuật. YEN sẽ làm hết sức mình để cung cấp dịch vụ cho người dùng đảm bảo tính liên tục và bảo mật của dịch vụ, tuy nhiên. YEN không thể thấy trước và ngăn chặn rủi ro pháp lý, kỹ thuật và cácvrủi ro khác bất kỳ lúc nào, bao gồm nhưng không giới hạn những lý do bất khả kháng, vi rút, trojan, hack, hệ thống không ổn định, các gián đoạn dịch vụ, mất dữ liệu và các tổn thất và rủi ro khác có thể phát sinh từ các dịch vụ của bên thứ ba, các hoạt động của chính phủ, v.v..</p>
 			
@@ -35,7 +36,7 @@
 			<p>4.2 YEN có thể cung cấp cho Bạn tính năng tắt thông tin quảng cáo, nhưng bất kỳ lúc nào Bạn không thể chặn hoặc lọc thông tin quảng cáo; nhưng không được vi phạm thỏa thuận không rõ ràng hoặc được YEN cho phép một cách rõ ràng.</p>
 			<p>4.3 YEN sẽ thực hiện các nghĩa vụ liên quan đến nhà quảng cáo theo các quy định của pháp luật. Bạn sẽ tự đánh giá tính xác thực của thông tin quảng cáo và chịu trách nhiệm vể hành vi của mình. YEN không chịu trách nhiệm cho bất kỳ tổn thất hoặc thiệt hại nào do nội dung quảng cáo gây ra.</p>
 			<p>4.4 Bạn đồng ý rằng đối với những thông tin quảng cáo xuất hiện trong dịch vụ của YEN Bạn nên cân nhắc đánh giá tính xác thực và độ tin cậy và Bạn sẽ chịu trách nhiệm về các giao dịch được thực hiện theo thông tin quảng cáo, ngoại trừ được quy định rõ ràng bởi pháp luật.</p>
-
+			
 			<h4>5.Chính sách riêng tư</h4>
 			<p>5.1 Tôn trọng quyền riêng tư của người dùng là một chính sách cơ bản của YEN. Vì vậy, như là một bổ sung cho việc phân tích dữ liệu đăng ký người dùng, YEN sẽ không tiết lộ, chỉnh sửa dữ liệu đã đăng ký và nội dung mà được lưu trữ khi mà không có sự cho phép của người dùng hợp pháp. Trừ Khi luật pháp yêu cầu thì YEN cần phải tiết lộ thông tin này trong các trường hợp sau đây:</p>
 			<p>(1) Tuân thủ các yêu cầu pháp lý liên quan và tuân thủ các thủ tục dịch vụ pháp lý của YEN;</p>
@@ -85,7 +86,7 @@
 			<p>(2) YEN cũng quản lý chặt chẽ nhân viên hoặc bên thứ ba có thể tiếp xúc với thông tin của bạn, bao gồm nhưng không giới hạn ký các thỏa thuận bảo mật và thiết lập các hệ thống bảo mật liên quan;</p>
 			<p>(3) Bạn nên giữ tài khoản và mật khẩu và các thông tin liên quan khác. YEN sẽ đảm bảo rằng thông tin của Bạn không bị mất, bị lạm dụng và thay đổi bởi các biện pháp bảo mật như sao lưu vào các máy chủ khác và mã hóa mật khẩu người dùng. Mặc dù các biện pháp an ninh nói trên, do hạn chế kỹ thuật và phương tiện, ngay cả khi Bạn làm mọi thứ có thể để tăng cường các biện pháp an ninh, thì cũng sẽ không có "biện pháp bảo mật hoàn hảo" trên mạng thông tin. Nếu Bạn đã để thông tin tài khoản và mật khẩu của mình bị rò rỉ do các lý do của riêng bạn, Bạn sẽ chịu trách nhiệm về mặt pháp lý;</p>
 			<p>(4) Bạn hiểu và đồng ý: Bạn sử dụng trang web của YEN, nếu Bạn không tránh khỏi việc phải tiết lộ hoặc cung cấp thông tin cá nhân của Bạn với đối tác tiềm năng hay các đối tác khác, và Bạn nên có sự bảo vệ tốt trong trường hợp cần thiết. Bạn sử dụng YEN trong nền tảng dịch vụ, nếu Bạn phát hiện thông tin cá nhân của bạn đã bị xâm nhập hoặc các trường hợp có thể đã bị xâm nhập, Bạn nên liên hệ DỊch vụ Khách hàng của YEN. Để YEN có thể có các biện pháp hiệu quả để đảm bảo sự an toàn cho thông tin cá nhân của bạn, tránh tài thiệt hại cho tài khoản của bạn, ngăn chặn sự xuất hiện và gia tăng hơn nữa của sự mất mát. Cho dù YEN đã đưa phương tiện hiệu quả để ngăn chặn sự thiệt hại của Bạn hoặc ngăn chặn thiệt hại của Bạn gia tăng. YEN sẽ không chịu bất cứ trách nhiệm đối với thiệt hại của bạn, Bạn hoàn toàn chịu trách nhiệm về những thiệt hại này.</p>
-
+			
 			<h4>6. Lưu trữ và hạn chế thông tin của người sử dụng</h4>
 			<p>6.1 YEN sẽ không chịu trách nhiệm với những thông tin mà người sử dụng đăng tải bị lỗi khi lưu hoặc xoá dữ liệu. YEN có quyền xác định xem hành vi của người dùng có tuân thủ các yêu cầu và tinh thần của Điều khoản Thoả thuận dịch vụ của YEN hay không. Nếu người dùng vi phạm các điều khoản dịch vụ, YEN có quyền ngừng cung cấp dịch vụ mạng của mình.</p>
 			
@@ -96,14 +97,14 @@
 			<p>8.2 DỊch vụ “Thi công trước trả tiền sau"đảm bảo là YEN hoặc những bên liên quan được chỉ định bởi YEN và những công ty thiết kế thi công sử dụng dịch vụ uỷ thác tài chính, công thi thiết kết có thể tiến hành thi công trước, sau khi hoàn thành, YEN hoặc những bên liên quan được chỉ định bởi YEN sẽ trả tiền theo chỉ thị của bạn.</p>
 			<p>8.3 Công ty thiết kế thi công trên nền tảng YEN sẽ bồi thường mọi tổn thất cho Bạn nếu họ vi phạm nội dung đã cam kết trong thời gian cung cấp dịch vụ cho bạn.</p>
 			<p>8.4 YEN không đảm bảo những cam kết của công ty thiết kế thi công, đồng thời cũng không đảm bảo nội dung của các dịch vụ khác ngoại trừ cam kết dịch vụ trên.</p>
-
+			
 			<h4>9. Xử lý khiếu nại với bên thứ 3 việc người sử dụng đăng tải, phát nội dung</h4>
 			<p>9.1 Nội dung Bạn đăng tải hoặc phát tán thông qua dịch vụ này (bao gồm nhưng không giới hạn ở các trang web, văn bản, hình ảnh, âm thanh, video, đồ họa, v.v.) thuộc trách nhiệm của bạn.</p>
 			<p>9.2 Nội dung Bạn đăng tải hoặc phát tán phải có nguồn gốc hợp pháp, những nội dung liên quan phải thuộc quyền sở hữu của Bạn hoặc Bạn được phép sử dụng.</p>
 			<p>9.3 Bạn đồng ý YEN có thể sử dụng nội dung Bạn đăng tải hoặc phát tán cho mục đích hoàn thành Thỏa thuận này hoặc cung cấp Dịch vụ.</p>
 			<p>9.4 Nếu YEN nhận được thông báo từ chủ sở hữu rằng nội dung Bạn gửi hoặc phát tán vi phạm các quyền liên quan, Bạn đồng ý rằngYEN có quyền đưa ra phán quyết độc lập và thực hiện các biện pháp như xóa, chặn hoặc phá vỡ liên kết.</p>
 			<p>9.5 Bạn không được vi phạm các qui định của pháp luật, hay xâm phạm quyền hợp pháp của người khác khi sử dụng dịch vụ này. Bạn hiểu và đồng ý rằng nếu Bạn bị người khác khiếu nại về việc vi phạm,hoặc xâm phạm quyền hợp pháp của người khác, Bạn phải cung cấp các thông tin cần thiết như chủ đề, thông tin liên hệ và các nội dung liên quan của các bên có liên quan trong tranh chấp với các bên tranh chấp khác hoặc các phòng ban liên quan để giải quyết khiếu nại kịp thời. Giúp việc giải quyết tranh chấp bảo vệ quyền và lợi ích hợp pháp của người khác.</p>
-
+			
 			<h4>10.Những lý do bất khả kháng và những điều khoản miễn trách nhiệm khác</h4>
 			<p>10.1 Bạn hiểu và đồng ý rằng trong quá trình sử dụng Dịch vụ, Bạn có thể gặp phải các yếu tố rủi ro bất khả kháng, điều này có thể khiến Dịch vụ bị gián đoạn. Lý do bất khả kháng là một sự việc khách quan không thể lường trước được, và không thể tránh khỏi có tác động đáng kể lên một hoặc cả hai bên, bao gồm nhưng không giới hạn trong thiên tai như lũ lụt, động đất, dịch bệnh và bão, và các sự kiện xã hội như chiến tranh, bất ổn, hành động của chính phủ, v.v… Trong tình huống trên,YEN sẽ cố gắng hợp tác với các đơn vị liên quan ưu tiên việc sửa chữa kịp thời, nhưng thiệt hại gây ra cho Bạn sẽ không nằm trong phạm vi vi phạm của pháp luật.</p>
 			<p>10.2 Trong phạm vi luật pháp cho phép, YEN sẽ không chịu trách nhiệm cho việc bị ngừng hoặc gián đoạn dịch vụ nào do:</p>
@@ -167,7 +168,7 @@
 			<p>(1) Nhận biết rõ về sự khác nhau giữa thế giới ảo và thế giớ thực tại, tránh bị mê muội bởi mạng Internet, ảnh hưởng đến công việc học tập hàng ngày.</p>
 			<p>(2) Khi điền các thông tin cá nhân, tăng cường ý thức bảo vệ bản nhân, tránh để những thành phần xấu quấy rối cuộc sống.</p>
 			<p>(3) Sử dụng mạng Internet đúng đắn, dưới sự chỉ đạo của người giám hộ hoặc thầy cô giáo.</p>
-			<p>(4) Tránh tuỳ tiện gặp gỡ những bạn quen trên mạng hoặc tham gia những hoạt động offline, tránh những thành phần phi pháp có cơ hội tận dụng gây nguy hiểm cho bản thân. </p>
+			<p>(4) Tránh tuỳ tiện gặp gỡ những bạn quen trên mạng hoặc tham gia những hoạt động offline, tránh những thành phần phi pháp có cơ hội tận dụng gây nguy hiểm cho bản thân. </p> -->
 		</div>
 	</div>
 </template>
@@ -178,14 +179,25 @@ export default {
 	data() {
 	  return {
 	  	thisTitle:this.$t('message.myFooter.termsOfService'),
-	  	isApp:this.$route.query.app
+	  	isApp:this.$route.query.app,
+	  	termsService:'',
 	  }
 	},
 	components: {
 		PageHeader
 	},
-	mounted() {
-	  
+	methods:{
+		getData:function(){
+			this.$fetch('/article/termsData')
+			.then((res)=>{
+				this.termsService = res.data
+			})
+		}
+	},
+	mounted(){
+	},
+	created(){
+		this.getData()
 	}
 }
 </script>

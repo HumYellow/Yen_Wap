@@ -9,13 +9,15 @@ module.exports={
 		Guarantee:'Bảo đảm',
 		Calculate:'Dự toán',
 		Mine:'Mỏ',
-		HoChiMing:'Hồ Chí Minh'
+		HoChiMing:'Hồ Chí Minh',
+		freeQuotation:'Miễn phí Thiết kế',
 	},
 	login:{
 		login:'Đăng nhập',
 		register:'Đăng ký ngay',
 		phone:'Số điện thoại',
 		password:'Mật khẩu',
+		pleaseInput:'Vui lòng nhập',
 		againPassword:'Vui lòng nhập lại mật khẩu',
 		get:'Nhận',
 		getCode:'Nhận mã xác thực',
@@ -69,7 +71,7 @@ module.exports={
     aboutUs:{
     	inputCompanyName:'Tên Công ty',
     	inputContactName:'Số điện thoại',
-    	inputTelephoneNumber:'Tham gia ngay'
+    	inputTelephoneNumber:'Tham gia ngay',
     },
     design:{
     	collection:'Bộ sưu tập',
@@ -77,6 +79,7 @@ module.exports={
     	atlasInformation:'Thông tin bản vẽ',
     	designDetails:'Thiết kế chi tiết.',
     	pictures:'Hình ảnh',
+    	contact:'Liên hệ'
 
     },
     company:{
@@ -248,7 +251,8 @@ module.exports={
 			contactNumber:'Điện thoại liên hệ',
 			recovered:'Chưa phản hồi',
 			unanswered:'Đã phản hồi',
-			haventReceived:"Bạn vẫn chưa đóng góp ý kiến."
+			haventReceived:"Bạn vẫn chưa đóng góp ý kiến.",
+			feedbackRecord:'Hồ sơ phản hồi',
 		},
 		uploadAlbum:'Tải lên tập ảnh',
 	},
@@ -260,7 +264,7 @@ module.exports={
 		getCode:'Nhận mã xác thực',
 		finish:'Hoàn thành',
 		newPhone:'Vui lòng nhập số điện thoại mới',
-		validationCode:'Nhập mã xác nhận bên phải',
+		validationCode2:'Nhập mã xác nhận bên phải',
 	}
   }
 }

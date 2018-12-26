@@ -23,7 +23,7 @@
 				<img :src="designerDesc.headImg" />
 				<div class="designerDescTitle">{{designerDesc.title}}</div>
 			</div>
-			<a v-if="designerDesc.phone" class="contactHe" :href="'tel:' + designerDesc.phone">Liên hệ</a>
+			<a v-if="designerDesc.phone" class="contactHe" :href="'tel:' + designerDesc.phone">{{$t("message.design.contact")}}</a>
 		</div>
 		<div class="designPicList">
 			<router-link :to="'/designDetails/'+design.designAtlasId" class="designPicListMod" v-for="design in designList">

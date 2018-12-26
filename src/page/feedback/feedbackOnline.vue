@@ -17,7 +17,7 @@
 <template>
 	<div id="feedbackOnline">
 		<div class="feedbackOnlineHead">
-			<PageHeader thisTitle="Hồ sơ phản hồi"></PageHeader>
+			<PageHeader :thisTitle="$t('message.myFooter.feedbackMod.feedbackRecord')"></PageHeader>
 		</div>
 
 		<div id="feedbackOnlineMod">

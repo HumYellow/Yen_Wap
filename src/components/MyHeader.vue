@@ -36,7 +36,7 @@
 				<div class="menuCity">{{$t('message.menu.HoChiMing')}}</div>
 				<!-- <div class="menuBtn" @click="menuShowSwitch">菜单</div> -->
 				<router-link to="/placeOrder" class="toCount">
-					Miễn phí Thiết kế >
+					{{$t('message.menu.freeQuotation')}} >
 				</router-link>
 				<!-- <div v-if="isLogin" class="loginMod">
 					<router-link to="/myCenter">

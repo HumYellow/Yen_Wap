@@ -7,7 +7,9 @@ import LangCn from '../static/lang/cn'
 import LangVn from '../static/lang/vn'
 
 Vue.use(VueI18n)
-let lang = swallow.localStorageGet('lang')
+/*let lang = swallow.localStorageGet('lang')*/
+let lang = swallow.getCookie('lang')
+
 const i18n = new VueI18n({
   //定义默认语言
   locale: lang?lang:'VN',

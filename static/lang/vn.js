@@ -125,7 +125,8 @@ module.exports={
     		all:'Tất cả',
     	},
     	materialSelectionManual:'Sổ tay vật liệu',
-    	geomanticCulture:'Thi công phong thuỷ'
+    	geomanticCulture:'Thi công phong thuỷ',
+    	strategyDetailsTitle:'Chi tiết Raiders',
     },
     myCenter:{
     	project:'Mã dự án',

@@ -125,7 +125,8 @@ module.exports={
     		all:'all',
     	},
     	materialSelectionManual:'Material selection manual',
-    	geomanticCulture:'Geomantic culture'
+    	geomanticCulture:'Geomantic culture',
+    	strategyDetailsTitle:'Strategy Details',
     },
     myCenter:{
     	project:'project',

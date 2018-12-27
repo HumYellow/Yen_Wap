@@ -98,7 +98,8 @@ export default{
 		return{
 			showHead:true,
 			noShowList:['/login'],
-			lang:this.$swallow.localStorageGet("lang"),
+			/*lang:this.$swallow.localStorageGet("lang"),*/
+			lang:this.$swallow.getCookie('lang'),
 			contactShow:true,
 			path:{
 				home:'',
@@ -158,7 +159,8 @@ export default{
 			this.$swallow.move()
 		},
 		langTabFn:function(lang){
-			this.$swallow.localStorageSet("lang",lang)
+			/*this.$swallow.localStorageSet("lang",lang)*/
+			this.$swallow.setCookie('lang',lang,2400)
 			window.history.go(0)
 			/*this.$i18n.locale = lang
 			this.lang = this.$swallow.localStorageGet('lang')

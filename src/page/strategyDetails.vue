@@ -19,7 +19,7 @@ export default {
 	name: 'strategyDetails',
 	data() {
 	  return {
-	  	thisTitle:'Chi tiết Raiders',
+	  	thisTitle:this.$t('message.strategy.strategyDetailsTitle'),
 	  	isApp:this.$route.query.app,
 	  	desc:{
 	  	}
@@ -31,7 +31,6 @@ export default {
 		StrategySidebar
 	},
 	mounted() {
-		document.title = 'Chi tiết Raiders'
 	  
 	}
 }

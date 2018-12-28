@@ -9,7 +9,7 @@
 <template>
 	<div id="homeHead">
 		<swiper class="swiperHead" :options="swiperOption" ref="mySwiper" v-if="swiperShow">
-			<swiper-slide v-for="(slide ,index) in swiperSlides">
+			<swiper-slide v-for="(slide ,index) in swiperSlides" :key="index">
 				<a class="headerImage" :href="slide.link">
 					<img height="100%" :src='slide.img' align="center" />
 				</a>

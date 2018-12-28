@@ -13,7 +13,7 @@
 <template>
 	<div class="DesignDetailsList" id="galley" ref="galley">
     	<ul class="pictures masonry">
-            <li v-for="(slide ,index) in swiperSlides.subDesignList" class="item">
+            <li v-for="(slide ,index) in swiperSlides.subDesignList" :key="index" class="item">
                <img class="item_content" width="100%" :src="slide.img" :alt="slide.description?slide.description:slide.name">
                <span>{{slide.name}}</span>
             </li>

@@ -18,7 +18,7 @@
 	<div class="homeDesign">
 		<h3 class="homeTitle">—&nbsp;&nbsp;{{$t("message.home.designScheme")}}&nbsp;&nbsp;—</h3>
 		<div class="designList clear">
-			<div class="homeDesignMod" v-for="design in designList">
+			<div class="homeDesignMod" v-for="(design,index) in designList" :key="index">
 				<div class="designDesc">
 					<div class="designDescBox">
 						<div class="designName">{{design.name}}</div>
@@ -31,7 +31,7 @@
 					</router-link> -->
 				</div>
 				<router-link :to="'/designDetails/'+design.relatedId" class="designBox">
-					<img v-for="imgList in design.subDesignList" width="49%" :style="'background-image:url('+imgList.img+')'" />
+					<img v-for="(imgList,index) in design.subDesignList" :key="index" width="49%" :style="'background-image:url('+imgList.img+')'" />
 				</router-link>
 			</div>
 		</div>

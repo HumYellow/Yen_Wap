@@ -224,6 +224,7 @@ module.exports={
 		personalData:{
 			phone:'Số điện thoại',
 			acreage:'Diện tích',
+			hotCity:'Thành phố nổi tiếng',
 			city:'Thành phố',
 			currentProfilePhoto:'Hình đại diện ',
 			uploadProfilePhoto:'Đăng hình đại diện',

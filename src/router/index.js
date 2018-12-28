@@ -49,8 +49,6 @@ import aboutUs from '@/components/myCenter/setUp/aboutUs'
 import termsService from '@/components/myCenter/setUp/termsService'
 import designerDetails from '@/page/designerDetails'
 
-import myCenterHome from '@/components/myCenter/MyCenterHome/MyCenterHome'
-import myCenterHome2 from '@/components/myCenter/MyCenterBody2'
 
 Vue.use(Router)
 export default new Router({
@@ -229,7 +227,6 @@ export default new Router({
     {
       path:'/personalData',
       component: personalData,
-      name:'personalData',
       meta:{
         type:'personalData',
         requireLogin:true,
@@ -250,14 +247,6 @@ export default new Router({
           name:'chooseCity',
           meta:{
             type:'chooseCity',
-          }
-        },
-        {
-          path:'acreage',
-          component: acreage,
-          name:'acreage',
-          meta:{
-            type:'acreage',
           }
         },
         {

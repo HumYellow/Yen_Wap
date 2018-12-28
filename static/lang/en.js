@@ -222,6 +222,7 @@ module.exports={
 		personalData:{
 			phone:'Tel',
 			acreage:'Acreage',
+			hotCity:'Hot City',
 			city:'City',
 			currentProfilePhoto:'Current profile photo',
 			uploadProfilePhoto:'Upload Profile Photo',

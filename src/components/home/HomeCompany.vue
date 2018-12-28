@@ -23,7 +23,7 @@
 		</h3>
 		<div class="companyList clear">
 			<swiper class="swiperHead" :options="swiperOption">
-				<swiper-slide v-for="(company ,index) in companyList">
+				<swiper-slide v-for="(company ,index) in companyList" :key="index">
 					<router-link class="companyBox" :to="'/companyDetails/'+company.relatedId">
 						<div class="companyBg">
 							<img width="100%" :src="company.img" />

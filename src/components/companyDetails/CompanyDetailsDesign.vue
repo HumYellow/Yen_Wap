@@ -14,7 +14,7 @@
 		</h3>
 		<div class="companyDetailsDesignMod clear">
 			<swiper class="swiperHead" :options="swiperOption">
-				<swiper-slide v-for="design in companyDetailsDesign">
+				<swiper-slide v-for="(design,index) in companyDetailsDesign" :key="index">
 					<router-link :to="'/designDetails/'+design.id" class="designMod">
 						<div class="designModImg"><img width="100%" :src="design.img" /></div>
 						<div class="designModDesc clear">

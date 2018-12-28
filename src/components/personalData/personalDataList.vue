@@ -46,7 +46,7 @@
 					<div class="personalDataTitle">{{$t('message.myCenter.personalData.acreage')}}</div>
 					<div class="personalDataDesc">{{personalData.acreage}}m²</div>
 				</router-link>
-				<router-link v-for="personalType in personalTypeData" :to="personalType.designRangeId == 4?'/personalData/chooseStyle':'/personalData/chooseType'" class="personalDataMod clear">
+				<router-link v-for="(personalType,index) in personalTypeData" :key="index" :to="personalType.designRangeId == 4?'/personalData/chooseStyle':'/personalData/chooseType'" class="personalDataMod clear">
 					<div class="personalDataTitle">{{personalType.name}}</div>
 					<div class="personalDataDesc">
 						<span class="selectDataMod" v-for="select in personalType.selectTypeList">{{select.name}}</span>

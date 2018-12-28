@@ -14,7 +14,7 @@
 	<div id="feedbackList">
 		<PageHeader :thisTitle="$t('message.myFooter.feedbackMod.myFeedback')"></PageHeader>
 		<div class="feedbackList">
-			<router-link :to="'/feedbackOnline/'+feedback.complaintId" v-for="feedback in feedbackListData" class="feedbackListMod">
+			<router-link :to="'/feedbackOnline/'+feedback.complaintId" v-for="(feedback,index) in feedbackListData" class="feedbackListMod" :key="index">
 				<div class="feedbackListTitle clear">
 					<div class="left">{{feedback.createTime}}</div>
 					<div class="status right" v-if="feedback.status == 'A'">{{$t("message.myFooter.feedbackMod.recovered")}}</div>

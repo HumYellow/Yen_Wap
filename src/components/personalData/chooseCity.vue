@@ -8,7 +8,7 @@
 <template>
 	<div class="chooseCity">
 		<PageHeader :thisTitle="$t('message.myCenter.myCenterSidebar.personalData')"></PageHeader>
-		<div class="chooseCityTitle">Hot City</div>
+		<div class="chooseCityTitle">{{$t("message.myCenter.personalData.hotCity")}}</div>
 		<div class="chooseCityList">
 			<div v-for="city in chooseCityList" class="chooseCityMod" :data-select="city.cityId==selectCity?'select':''" @click="subData(city.cityId)">
 				{{city.name}}

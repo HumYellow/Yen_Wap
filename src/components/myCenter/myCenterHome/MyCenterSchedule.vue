@@ -30,7 +30,7 @@
 .myCenterScheduleMod .companyList{width:100%;margin-top:10px;}
 .myCenterScheduleMod .companyListBox{float:left;width:33%;text-align:center;}
 .myCenterScheduleMod .companyListBox a{display:block;}
-.myCenterScheduleMod .companyPicBox{height:16vw;overflow:hidden;}
+.myCenterScheduleMod .companyPicBox{overflow:hidden;}
 .myCenterScheduleMod .companyListBox p{margin-top:10px;font-size:3.5vw;}
 .presentationPicBox{margin-top:10px;}
 

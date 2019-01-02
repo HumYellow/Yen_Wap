@@ -17,10 +17,10 @@
 			<img height="100%" src="/static/image/leftBack.png" />
 		</a>
 		{{thisTitle}}
-		<div v-if="this.thisName == 'companyDetails' || this.thisName == 'designDetails'" class="pageHeaderCollection rightMod">
-			<!-- <div class="mr15" @click="toShareFn">
+		<div v-if="this.thisName == 'companyDetails' || this.thisName == 'designDetails' || this.thisName == 'strategyDetails'" class="pageHeaderCollection rightMod">
+			<div class="mr15" @click="toShareFn">
 				<img class="collectionImg" width="18" src="/static/image/headerShare.png" />
-			</div> -->
+			</div>
 			<div @click="subCollection(collect)" :data-collect="collect">
 				<img v-if="collect==1" class="collectionImg" width="18" src="/static/image/collectionFinish.png" />
 				<img v-else class="collectionImg" width="18" src="/static/image/collectionHead.png" />

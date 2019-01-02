@@ -160,13 +160,15 @@ export default new Router({
     {
       path:'/strategyList/:id',
       meta:{
-        type:'strategy'
+        type:'strategy',
+        collectType:'Strategy'
       },
       component: strategyList
       
     },
     {
       path:'/strategyDetails/:id',
+      name:'strategyDetails',
       meta:{
         type:'strategy'
       },

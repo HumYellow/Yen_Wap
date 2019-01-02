@@ -13,12 +13,12 @@
 	    	<router-link to="/placeOrder">
 	    		{{$t('message.company.freeDesign')}}
 	    	</router-link>
-	    	<!-- <div class="commentBtnBox" @click="toCommen">
-	    			    	<span class="commentBtn">
-	    			    		<img height="50%" width="auto" src="/static/image/commentIcon.png" />
-	    						<span>{{swiperSlides.evaluateCount}}</span>
-	    			    	</span>
-	    			    </div> -->
+	    	<div class="commentBtnBox" @click="toCommen">
+		    	<span class="commentBtn">
+		    		<img height="50%" width="auto" src="/static/image/commentIcon.png" />
+					<span>{{swiperSlides.evaluateCount}}</span>
+		    	</span>
+		    </div>
 	    </div>
 	    <commentBox v-if="commenShow" :commentNum="swiperSlides.evaluateCount" @closeCommen="closeCommen" @getData="getData"></commentBox>
     </div>

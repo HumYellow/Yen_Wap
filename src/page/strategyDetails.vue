@@ -3,17 +3,14 @@
 <template>
 	<div>
 		<PageHeader v-if="!isApp" :thisTitle="thisTitle"></PageHeader>
-		<div class="strategyDetails clear">
-			<div class="strategyDetailsPage clear">
-				<StrategyCenter></StrategyCenter>
-			</div>
-	    </div>
+		<StrategyCenter></StrategyCenter>
+		<!-- <StrategyComment></StrategyComment> -->
 	</div>
 </template>
 <script>
 import PageHeader from '@/components/PageHeader'
 import StrategyCenter from '@/components/strategyDetails/StrategyCenter'
-import StrategySidebar from '@/components/strategyDetails/StrategySidebar'
+import StrategyComment from '@/components/strategyDetails/StrategyComment'
 
 export default {
 	name: 'strategyDetails',
@@ -28,7 +25,7 @@ export default {
 	components: {
 		PageHeader,
 		StrategyCenter,
-		StrategySidebar
+		StrategyComment,
 	},
 	mounted() {
 	  

@@ -10,15 +10,15 @@
 #strategyList .strategyListBox{margin-top:5px;display: flex;justify-content: center;}
 #strategyList .strategyListMod h3{font-size:4vw;line-height:8vw;font-weight:400;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
 #strategyList .strategyListImd{width:40%;height:25vw;overflow:hidden;border-radius:10px;}
-#strategyList .strategyListDescBox{width:60%;font-size:3.2vw;color:#999;padding:0 0 0 5vw;box-sizing: border-box;}
-#strategyList .strategyListDescBox .strategySummary{line-height:3.5vw;overflow:hidden;
+#strategyList .strategyListDescBox{width:60%;font-size:3.2vw;color:#999;padding:0 0 0 5vw;box-sizing: border-box;position:relative;}
+#strategyList .strategyListDescBox .strategySummary{line-height:16px;overflow:hidden;
 	text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;}
-#strategyList .strategyListDescBox .strategyListDesc{height:25px;line-height:25px;display: flex;justify-content: center;align-items: center}
+#strategyList .strategyListDescBox .strategyListDesc{height:25px;line-height:25px;display: flex;justify-content: center;align-items: center;position:absolute;bottom:0;right:0;width:100%;box-sizing: border-box;padding-left:5vw;}
 #strategyList .strategyListDescBox .strategyListDesc span.strategyTime{width:80px;}
-#strategyList .strategyListDescBox .strategyListDesc span.strategySeen{width:calc(100% - 130px);background:url('/static/image/seenIcon.png') left center no-repeat;background-size:auto 50%;box-sizing: border-box;padding-left:25px;}
+#strategyList .strategyListDescBox .strategyListDesc span.strategySeen{width:calc(100% - 130px);background:url('/static/image/seenIcon.png') left center no-repeat;background-size:auto 50%;box-sizing: border-box;padding-left:20px;}
 #strategyList .strategyListDescBox .strategyListDesc span.strategyShare ,#strategyList .strategyListDescBox .strategyListDesc span.strategyCollection{margin-left:10px;width:15px;}
 </style>
 <template>
@@ -45,7 +45,7 @@
 						<div class="strategySummary">
 							{{strategy.summary}}
 						</div>
-						<!-- <div class="strategyListDesc">
+						<div class="strategyListDesc">
 							<span class="strategyTime">{{strategy.createTime}}</span>
 							<span class="strategySeen">{{strategy.viewCount}}</span>
 							<span class="strategyShare">
@@ -55,7 +55,7 @@
 								<img v-if="strategy.collect" :data-id="imgs.designAtlasId" class="collectionImg" width="14" src="/static/image/collectionFinish.png" />
 								<img v-else class="collectionImg" width="14" src="/static/image/collection.png" />
 							</span>
-						</div> -->
+						</div>
 					</div>
 				</div>
 			</router-link>

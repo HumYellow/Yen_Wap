@@ -119,9 +119,9 @@
 									<img v-if="props.value.collect" :data-id="props.value.designAtlasId" class="collectionImg" width="14" src="/static/image/collectionFinish.png" />
 									<img v-else :data-id="props.value.designAtlasId" class="collectionImg" width="14" src="/static/image/collection.png" />
 								</div>
-								<!-- <div class="share">
+								<div class="share">
 									<img :data-id="props.value.designAtlasId" class="shareImg" width="14" src="/static/image/share.png" />
-								</div> -->
+								</div>
 							</div>
 						</div>
 					</vue-waterfall-easy>
@@ -133,13 +133,13 @@
 							<h4>{{imgs.name}}</h4>
 							<div class="designListModDesc clear">
 								<router-link class="designListModDescMod left" :to="'/designerDetails/'+imgs.ownerId">
-									<img class="designerHead" :src="imgs.ownerImg" />
+									<img height="25" width="25" class="designerHead" :src="imgs.ownerImg" />
 									<span class="designerName">{{imgs.ownerTitle}}</span>
 								</router-link>
 								<div class="designListModDescMod right">
-									<!-- <div class="share" @click="toShareFn(imgs.designAtlasId)">
+									<div class="share" @click="toShareFn(imgs.designAtlasId)">
 										<img :data-id="imgs.designAtlasId" class="shareImg" width="20" src="/static/image/share.png" />
-									</div> -->
+									</div>
 									<div class="collection" :data-collect="imgs.collect" @click="collection($event,index)">
 										<img v-if="imgs.collect" :data-id="imgs.designAtlasId" class="collectionImg" width="20" src="/static/image/collectionFinish.png" />
 										<img v-else :data-id="imgs.designAtlasId" class="collectionImg" width="20" src="/static/image/collection.png" />

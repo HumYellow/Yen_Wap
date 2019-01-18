@@ -11,7 +11,6 @@ import register from '@/page/register'
 import forgetPassword from '@/page/forgetPassword'
 import design from '@/page/design'
 import designDetails from '@/page/designDetails'
-import designTest from '@/page/designTest'
 
 import company from '@/page/company'
 import companyDetails from '@/page/companyDetails'
@@ -96,12 +95,6 @@ export default new Router({
        keepAlive:false,
       },
       component: design
-    },
-    {
-      path: '/designTest',
-      meta:{
-      },
-      component: designTest
     },
     {
       path: '/designDetails/:id',

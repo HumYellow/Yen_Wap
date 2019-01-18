@@ -21,11 +21,11 @@
 	<div id="commentBox">
 		<div class="commentBox">
 			<div class="commentBoxTitle">
-				{{commentNum}}条评论
+				{{commentNum}} {{$t("message.comment.number")}}
 			</div>
 			<div class="commentMod" ref="commentMod">
 				<div class="commentListBox" ref="commentListBox">
-					<h4>全部评论</h4>
+					<h4>{{$t("message.comment.allComment")}}</h4>
 					<div class="commentListMod" v-for="(comment,index) in commentData">
 						<div class="userHead">
 							<img width="100%" height="100%" :src="comment.headImg" />
@@ -48,7 +48,7 @@
 				<img width="100%" src="/static/image/closeIcon.png" />
 			</div>
 			<div class="subComment">
-				<input v-model="subComment" placeholder="发表我的评论" @keyup.enter="subCommentFn" maxlength="120" />
+				<input v-model="subComment" :placeholder="$t('message.comment.pushComment')" @keyup.enter="subCommentFn" maxlength="120" />
 			</div>
 		</div>
 		<Eject @closeEject="closeEject" :ejectType="ejectType">
@@ -112,10 +112,6 @@ export default{
 				if(res.errcode=='0000'){
 					this.pageNo++
 					if(this.newData){
-						if(res.data.length < this.number){
-							this.isLast = true
-							this.$layer.msg(this.$t("message.tips.noMore"))
-						}
 						this.commentData = res.data
 						this.$nextTick(() => {
 							this.$refs.commentMod.scrollTop = 0
@@ -123,6 +119,10 @@ export default{
 				        });
 					}else{
 						this.commentData = this.commentData.concat(res.data)
+						if(res.data.length < this.number){
+							this.isLast = true
+							this.$layer.msg(this.$t("message.tips.noMore"))
+						}
 					}
 				}else{
 	  				this.$layer.alert(res.msg,{

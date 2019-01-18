@@ -52,6 +52,8 @@ module.exports={
 		image1:'/static/image/vnImage/homeDesignType_1.jpg',
 		image2:'/static/image/vnImage/homeDesignType_4.jpg',
 		image3:'/static/image/vnImage/homeDesignType_3.jpg',
+		share:'Chia sẻ',
+		collection:'Bộ sưu tập'
     },
     placeOrder:{
     	name:'Họ tên',
@@ -267,6 +269,12 @@ module.exports={
 		finish:'Hoàn thành',
 		newPhone:'Vui lòng nhập số điện thoại mới',
 		validationCode2:'Nhập mã xác nhận bên phải',
+	},
+	comment:{
+		comment:'comment',
+		number:'lời bình luận',
+		allComment:'Toàn bộ bình luận',
+		pushComment:'Gửi bình luận của tôi',
 	}
   }
 }

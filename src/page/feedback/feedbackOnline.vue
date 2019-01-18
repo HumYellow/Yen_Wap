@@ -64,7 +64,7 @@ export default {
 		PageHeader,
 	},
 	methods:{
-		getData:function(){console.info(this.lastPage)
+		getData:function(){
 			this.getDataing = true
 			var	data = {
 				'id':this.$route.params.id,

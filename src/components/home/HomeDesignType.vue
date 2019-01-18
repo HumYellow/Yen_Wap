@@ -1,7 +1,7 @@
 <style type="text/css">
 #homeDesignType{padding:0 1vw;}
 #homeDesignType .typeLeft ,#homeDesignType .typeRight{float:left;width:50%;box-sizing: border-box;padding:0 1vw;}
-#homeDesignType a{overflow:hidden;border-radius:10px;display:block;}
+#homeDesignType a{overflow:hidden;border-radius:10px;display:block;display: flex;align-items: center}
 #homeDesignType .typeLeft a{height:36vw;}
 #homeDesignType .typeRight a{height:17vw;}
 #homeDesignType .typeRight a:nth-child(2){margin-top:2vw;}

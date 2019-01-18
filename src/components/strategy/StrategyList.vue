@@ -7,6 +7,7 @@
 #strategyList .menuSecondMod[data-swich="select"]{color:#339966;}
 #strategyList .menuSecondMod img{margin:0 auto 10px;}
 #strategyList .strategyListMod{box-shadow: 1px -1px 20px #e9e9e9;padding:3vw;border-radius:10px;margin-bottom:3vw;}
+#strategyList .strategyListMod a{display:block;}
 #strategyList .strategyListBox{margin-top:5px;display: flex;justify-content: center;}
 #strategyList .strategyListMod h3{font-size:4vw;line-height:8vw;font-weight:400;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;overflow: hidden;}
 #strategyList .strategyListImd{width:40%;height:25vw;overflow:hidden;border-radius:10px;}
@@ -48,21 +49,24 @@
 						<div class="strategyListDesc">
 							<span class="strategyTime">{{strategy.createTime}}</span>
 							<span class="strategySeen">{{strategy.viewCount}}</span>
-							<span class="strategyShare">
+							<div class="share" @click.prevent="toShareFn(strategy.id)">
 								<img class="shareImg" width="14" height="14" src="/static/image/share.png" />
-							</span>
-							<span class="strategyCollection" @click="collectionFn($event,index)">
+							</div>
+							<!-- <span class="strategyCollection" @click="collectionFn($event,index)">
 								<img v-if="strategy.collect" :data-id="imgs.designAtlasId" class="collectionImg" width="14" src="/static/image/collectionFinish.png" />
 								<img v-else class="collectionImg" width="14" src="/static/image/collection.png" />
-							</span>
+							</span> -->
 						</div>
 					</div>
 				</div>
 			</router-link>
 		</div>
+		<shareBox v-if="shareShow" @closeShare="closeShare" :shareData="shareData"></shareBox>
     </div>
 </template>
 <script>
+import Eject from '@/components/public/eject/Eject'
+import shareBox from '@/components/public/eject/shareBox'
 
 export default {
 	name: '',
@@ -170,16 +174,26 @@ export default {
 	  	strategyNum:10,//获取公司数量
 	  	group:1,
 	  	groupNamber:10,
-	  	getDataing:false
+	  	getDataing:false,
+  		shareShow:false,
+  		shareData:{},
 	  }
 	},
 	components: {
+		shareBox
 	},
 	mounted() {
 		window.addEventListener('scroll', this.isBottom)
 		window.addEventListener('touchmove', this.isBottom)
 	},
 	methods:{
+		closeShare:function(){
+			this.shareShow = false
+		},
+		toShareFn:function(id){
+			this.shareShow = !this.shareShow
+			this.shareData.src = '/strategyDetails/'+id
+		},
 		menuFirstSelect:function(key){
 	  		this.menuFirstThis = key
 			this.group=1

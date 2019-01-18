@@ -54,3 +54,5 @@ input,select,textarea{vertical-align:middle;outline: none;}
 .mr30{margin-right:30px;}
 .mr40{margin-right:40px;}
 .mr50{margin-right:50px;}
+/* 文字处理 */
+.aloneTextEllipsis{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}

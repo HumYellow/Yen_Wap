@@ -21,7 +21,7 @@
 			<div class="mr15" @click="toShareFn">
 				<img class="collectionImg" width="18" src="/static/image/headerShare.png" />
 			</div>
-			<div @click="subCollection(collect)" :data-collect="collect">
+			<div @click="subCollection(collect)" :data-collect="collect" v-if="this.thisName != 'strategyDetails'">
 				<img v-if="collect==1" class="collectionImg" width="18" src="/static/image/collectionFinish.png" />
 				<img v-else class="collectionImg" width="18" src="/static/image/collectionHead.png" />
 			</div>
@@ -116,7 +116,7 @@ export default {
 		},
 		toShareFn:function(id){
 			this.shareShow = !this.shareShow
-			this.shareData.src = window.location.href
+			this.shareData.src = this.$route.path
 		}
 
 	}

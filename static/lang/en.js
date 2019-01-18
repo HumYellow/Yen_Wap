@@ -52,6 +52,8 @@ module.exports={
 		image1:'/static/image/homeDesignType_1.jpg',
 		image2:'/static/image/homeDesignType_4.jpg',
 		image3:'/static/image/homeDesignType_3.jpg',
+		share:'Share',
+		collection:'Collection'
     },
     placeOrder:{
     	name:'Name',
@@ -265,6 +267,12 @@ module.exports={
 		finish:'Finish',
 		newPhone:'Please enter the new phone number',
 		validationCode2:'Please enter the validation code'
+	},
+	comment:{
+		comment:'comment',
+		number:'comments',
+		allComment:'All comments',
+		pushComment:'Write a comment',
 	}
 
   }

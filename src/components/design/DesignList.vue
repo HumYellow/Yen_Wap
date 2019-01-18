@@ -26,14 +26,14 @@
 #designList[data-collectionMod = 'collection']{padding-top:0;}
 .vue-waterfall-easy-scroll{overflow:hidden !important;}
 #designList .designBox{width:24%;margin:0 .5%;height:200px;float:left;box-sizing: border-box;position:relative;overflow:hidden;}
-#designList .designDesc{padding:15px 0;font-size:3.5vw;color:#999;}
+#designList .designDesc{padding:10px 0;font-size:3.5vw;color:#999;}
 
-#designList .designDesc span.picName{display:block;text-align:left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+#designList .designDesc span.picName{display:block;text-align:left;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;line-height:16px;}
 #designList .designDesc .designDescDesigner{float:left;width:70%;display:block;color:#999;}
 #designList .designDesc .designDescDesigner img{width:15px;height:15px;border-radius:50%;margin-right:5px;}
 #designList .designDesc .designDescDesigner span{height:15px;line-height:15px;width:80%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;text-align:left;}
 #designList .designDesc .collection,#designList .designDesc .share{float:right;}
-#designList .designDesc .share{margin-right:10px;}
+#designList .designDesc .share{margin-right:7px;}
 #designList .designDesc .collection img{margin:0 auto;}
 #designList .item { break-inside: avoid; box-sizing: border-box; padding: 10px; position:relative;}
 #designList .masonry { column-count: 1;} 
@@ -51,8 +51,12 @@
 #designList .designListMod a{display:block;}
 #designList .designListMod h4{color:#333;font-weight:100;margin:10px 0;}
 #designList .designListMod .designListModPic{border-radius:10px;overflow:hidden;}
-#designList .designListMod .designListModDesc{height:25px;margin:5px 0;}
-#designList .designListMod .designListModDesc .designListModDescMod{height:100%;display: flex;align-items: center;}
+#designList .designListMod .designListModDesc{height:25px;margin:5px 0;position:relative;}
+#designList .designListMod .designListModDesc .designListModDescMod{float:left;height:100%;display: flex;align-items: center;width:75%;overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap}
+#designList .designDescUseBox{float:left;width:25%;}
+#designList .designListMod .designListModDesc .useBox{position:absolute;right:0;top:0;width:20%}
 #designList .designListMod .designListModDesc .designListModDescMod .share{margin-right:10px;}
 #designList .designListMod .designListModDesc .designerHead{height:100%;border-radius:50%;}
 #designList .designListMod .designListModDesc .designerName{margin-left:10px;color:#999;font-size:12px;}
@@ -115,12 +119,14 @@
 									<img class="left" :src="props.value.ownerImg" />
 									<span class="left">{{props.value.ownerTitle}}</span>
 								</div>
-								<div class="collection" :data-collect="props.value.collect">
-									<img v-if="props.value.collect" :data-id="props.value.designAtlasId" class="collectionImg" width="14" src="/static/image/collectionFinish.png" />
-									<img v-else :data-id="props.value.designAtlasId" class="collectionImg" width="14" src="/static/image/collection.png" />
-								</div>
-								<div class="share">
-									<img :data-id="props.value.designAtlasId" class="shareImg" width="14" src="/static/image/share.png" />
+								<div class="designDescUseBox">
+									<div class="collection" :data-collect="props.value.collect">
+										<img v-if="props.value.collect" :data-id="props.value.designAtlasId" class="collectionImg" width="14" src="/static/image/collectionFinish.png" />
+										<img v-else :data-id="props.value.designAtlasId" class="collectionImg" width="14" src="/static/image/collection.png" />
+									</div>
+									<div class="share">
+										<img :data-id="props.value.designAtlasId" class="shareImg" width="14" src="/static/image/share.png" />
+									</div>
 								</div>
 							</div>
 						</div>
@@ -132,15 +138,15 @@
 							<img class="designListModPic" width="100%" :src="imgs.img" />
 							<h4>{{imgs.name}}</h4>
 							<div class="designListModDesc clear">
-								<router-link class="designListModDescMod left" :to="'/designerDetails/'+imgs.ownerId">
+								<router-link class="designListModDescMod" :to="'/designerDetails/'+imgs.ownerId">
 									<img height="25" width="25" class="designerHead" :src="imgs.ownerImg" />
 									<span class="designerName">{{imgs.ownerTitle}}</span>
 								</router-link>
-								<div class="designListModDescMod right">
-									<div class="share" @click="toShareFn(imgs.designAtlasId)">
-										<img :data-id="imgs.designAtlasId" class="shareImg" width="20" src="/static/image/share.png" />
+								<div class="designListModDescMod useBox">
+									<div class="share" @click.prevent="toShareFn2(imgs.designAtlasId)">
+										<img class="shareImg" :data-id="imgs.designAtlasId" width="20" src="/static/image/share.png" />
 									</div>
-									<div class="collection" :data-collect="imgs.collect" @click="collection($event,index)">
+									<div class="collection" :data-collect="imgs.collect" @click.prevent="collection($event,index)">
 										<img v-if="imgs.collect" :data-id="imgs.designAtlasId" class="collectionImg" width="20" src="/static/image/collectionFinish.png" />
 										<img v-else :data-id="imgs.designAtlasId" class="collectionImg" width="20" src="/static/image/collection.png" />
 									</div>
@@ -358,6 +364,8 @@ export default {
 			if (event.target.tagName.toLowerCase() == 'img') {
 				if(event.target.className == 'collectionImg'){
 					this.collection(event, index)
+				}else if(event.target.className == 'shareImg'){
+					this.toShareFn(event, index)
 				}else{
 					this.$router.push(value.href)
 				}
@@ -387,6 +395,16 @@ export default {
 				}
 				this.collectioning = false
 			})
+		},
+		toShareFn:function(event, index){
+			event.preventDefault()
+			var thisId = event.target.attributes["data-id"].nodeValue
+			this.shareShow = !this.shareShow
+			this.shareData.src = '/designDetails/'+thisId
+		},
+		toShareFn2:function(thisId){
+			this.shareShow = !this.shareShow
+			this.shareData.src = '/designDetails/'+thisId
 		},
 		clickDesigner:function(id,type){
 			event.preventDefault()
@@ -458,11 +476,6 @@ export default {
 		},
 		closeShare:function(){
 			this.shareShow = false
-		},
-		toShareFn:function(id){
-			event.preventDefault()
-			this.shareShow = !this.shareShow
-			this.shareData.src = '/designDetails/'+id
 		}
 	},
 	created() {

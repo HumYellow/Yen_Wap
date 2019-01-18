@@ -1,10 +1,10 @@
 <style type="text/css">
-.toPlaceOrder{position:fixed;left:0;bottom:0;background:#fff;width:100%;padding:10px 0;display:flex;justify-content: center;box-sizing: border-box;padding:10px 5%;}
-.toPlaceOrder a{margin:0 auto;width:90%;display:block;height:40px;line-height:40px;color:#fff;background:#3FBB87;border-radius:8px;text-align:center;}
-.toPlaceOrder .commentBtnBox{max-width:10%;padding-left:4%;}
-.toPlaceOrder .commentBtn{height:40px;display: flex;flex-direction: column;justify-content: center;text-align:center;}
-.toPlaceOrder .commentBtn img{height:60%; width:auto;display:inline;}
-.toPlaceOrder .commentBtn span{height:40%;display:block;color:#666666;font-size:12px;line-height:16px;}
+.DesignDetailsFooter .toPlaceOrder{position:fixed;left:0;bottom:0;background:#fff;width:100%;padding:10px 0;display:flex;justify-content: center;box-sizing: border-box;padding:10px 5%;}
+.DesignDetailsFooter .toPlaceOrder a{margin:0 auto;width:90%;display:block;height:40px;line-height:40px;color:#fff;background:#3FBB87;border-radius:8px;text-align:center;}
+.DesignDetailsFooter .toPlaceOrder .commentBtnBox{max-width:10%;padding-left:4%;}
+.DesignDetailsFooter .toPlaceOrder .commentBtn{height:40px;display: flex;flex-direction: column;justify-content: center;text-align:center;}
+.DesignDetailsFooter .toPlaceOrder .commentBtn img{height:60%; width:auto;display:inline;}
+.DesignDetailsFooter .toPlaceOrder .commentBtn span{height:40%;display:block;color:#666666;font-size:12px;line-height:16px;}
 
 </style>
 <template>

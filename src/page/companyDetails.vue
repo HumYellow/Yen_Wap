@@ -4,8 +4,8 @@
 #companyDetails .companyDetails{padding:3vw; }
 #companyDetails .companyDetailsMod h3{font-weight: 400;font-size:5vw;line-height:30px;margin-bottom:3vw;color:#333;}
 #companyDetails .companyDetailsMod h3 .moreTo{float:right;font-size:4vw;color:#999;}
-.toPlaceOrder{position:fixed;left:0;bottom:0;background:#fff;width:100%;padding:10px 0;}
-.toPlaceOrder a{margin:0 auto;width:90%;display:block;height:40px;line-height:40px;color:#fff;background:#3FBB87;border-radius:8px;text-align:center;}
+#companyDetails .toPlaceOrder{position:fixed;left:0;bottom:0;background:#fff;width:100%;padding:10px 0;}
+#companyDetails .toPlaceOrder a{margin:0 auto;width:90%;display:block;height:40px;line-height:40px;color:#fff;background:#3FBB87;border-radius:8px;text-align:center;}
 </style>
 <template>
 	<div id="companyDetails">
@@ -64,7 +64,6 @@ export default {
 		})
 		.then((res)=>{
 			this.desc = res.data
-			console.info(this.desc)
 		})
 	},
 }

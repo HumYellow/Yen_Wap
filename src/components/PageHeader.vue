@@ -13,9 +13,9 @@
 </style>
 <template>
 	<div id="pageHeader" class="pageHeader clear">
-		<a href="JavaScript:history.go(-1)" class="backLink">
+		<span @click="linkBack" class="backLink">
 			<img height="100%" src="/static/image/leftBack.png" />
-		</a>
+		</span>
 		{{thisTitle}}
 		<div v-if="this.thisName == 'companyDetails' || this.thisName == 'designDetails' || this.thisName == 'strategyDetails'" class="pageHeaderCollection rightMod">
 			<div class="mr15" @click="toShareFn">
@@ -117,6 +117,9 @@ export default {
 		toShareFn:function(id){
 			this.shareShow = !this.shareShow
 			this.shareData.src = this.$route.path
+		},
+		linkBack:function(){
+			this.$router.go(-1)
 		}
 
 	}

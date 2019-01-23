@@ -1,11 +1,12 @@
 <style type="text/css">
-.strategyCenter{width:100%; box-sizing: border-box;padding:30px;}
-.strategyCenter .strategyCenterTitle h3{font-size:18px; font-weight:400; color:#333; }
+.strategyCenter{width:100%; box-sizing: border-box;padding:12px;}
+.strategyCenter .strategyCenterTitle{ margin-bottom:20px;}
+.strategyCenter .strategyCenterTitle h3{font-size:18px; font-weight:400; color:#333;}
 .strategyCenter .strategyCenterSubtitle{padding-top:15px;font-size:14px; color:#999;}
 .strategyCenter .strategyCenterText .summary{padding:20px;background:#f8f8f8;}
 .strategyCenter .strategyCenterText img{display:inline-block;}
-.strategyCenter .strategyCenterText p{margin-top:20px;color:#666666; line-height:5.5vw;font-size:3.8vw;}
-.strategyCenterImg{overflow:hidden;border-radius:5px;margin-bottom:30px;}
+.strategyCenter .strategyCenterText .strategyCenterDesc{color:#666666; line-height:5.5vw;font-size:3.8vw;}
+.strategyCenterImg{overflow:hidden;border-radius:5px;margin:12px 0;}
 </style>
 <template>
 	<div class="strategyCenter clear">
@@ -18,10 +19,13 @@
 				{{desc.summary}}
 				
 			</div> -->
-			<p v-html="desc.content"></p>
+			<p class="strategyCenterDesc" v-html="desc.content"></p>
 		</div>
 		<div v-if="!isApp">
-			<div v-if="desc.img" class="strategyCenterImg">
+			<div v-if="desc.memberId" v-for="img in desc.imgList" class="strategyCenterImg">
+				<img width="100%" :src="img" />
+			</div>
+			<div v-if="!desc.memberId" class="strategyCenterImg">
 				<img width="100%" :src="desc.img" />
 			</div>
 		</div>

@@ -20,7 +20,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="shareMod">取消</div>
+			<div class="shareMod" @click="closeEject">取消</div>
 		</div>
 		<Eject @closeEject="closeEject" :ejectType="ejectType">
 			

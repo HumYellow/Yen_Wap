@@ -104,10 +104,10 @@ export default {
 				if(data[a] == ''){
 					this.contSub = false
 					let nullName;
-					if(a == 'userName' && a == 'phone'){
+					if(a == 'userName' || a == 'phone'){
 						nullName = this.$t('message.login.phone')
-					}else if(a == 'password'){
-						nullName = this.$t('message.login.password')
+					}else if(a == 'name'){
+						nullName = this.$t('message.placeOrder.name')
 					}else if(a == 'acreage'){
 						nullName = this.$t('message.placeOrder.acreage')
 					}else if(a == 'houseType'){
@@ -115,7 +115,7 @@ export default {
 					}else if(a == 'password'){
 						nullName = this.$t('message.placeOrder.type')
 					}
-					this.$layer.alert(nullName+this.$t('message.tips.contNull'),{
+					this.$layer.alert(nullName+' '+this.$t('message.tips.contNull'),{
 						title:this.$t('message.tips.titleMsg'),
 						btn:this.$t('message.tips.ok')
 					})

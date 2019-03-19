@@ -11,9 +11,6 @@
 		<div class="strategy clear">
 			<div class="strategyPage">
 				<StrategyList></StrategyList>
-				<!-- <StrategyMaterial></StrategyMaterial>
-				<Geomancy></Geomancy>
-				<ContactWhole></ContactWhole> -->
 			</div>
 	    </div>
 	</div>
@@ -21,9 +18,6 @@
 <script>
 import PageHeader from '@/components/PageHeader'
 import StrategyList from '@/components/strategy/StrategyList'
-/*import StrategyProcess from '@/components/strategy/StrategyProcess'
-import StrategyMaterial from '@/components/strategy/StrategyMaterial'
-import Geomancy from '@/components/strategy/Geomancy'*/
 import ContactWhole from '@/components/ContactWhole'
 
 export default {
@@ -38,9 +32,6 @@ export default {
 	components: {
 		PageHeader,
 		StrategyList,
-		/*StrategyProcess,
-		StrategyMaterial,
-		Geomancy,*/
 		ContactWhole
 	},
 	mounted() {
